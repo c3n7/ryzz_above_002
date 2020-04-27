@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://players/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_walk4.png" type="Texture" id=2]
@@ -45,12 +45,6 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 24 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "run"
-length = 0.25
-loop = true
-step = 0.005
-
 [node name="PlayerGrey" instance=ExtResource( 1 )]
 script = ExtResource( 13 )
 
@@ -61,6 +55,3 @@ frame = 4
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource( 2 )
-
-[node name="AnimationPlayer" parent="." index="3"]
-anims/run = SubResource( 3 )

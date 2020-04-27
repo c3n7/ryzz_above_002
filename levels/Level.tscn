@@ -2,5 +2,39 @@
 
 [node name="Level" type="Node2D"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( -640, -960 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 1440 )
+
+[node name="Tiles" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Tiles"]
+position = Vector2( -640, 0 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 480 )
+
+[node name="Hills" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Hills"]
+position = Vector2( -640, 0 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 480 )
+
 [node name="World" type="TileMap" parent="."]
 format = 1
+__meta__ = {
+"_edit_lock_": true
+}
