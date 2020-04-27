@@ -46,6 +46,7 @@ func change_state(new_state):
 				change_state(DEAD)
 		JUMP:
 			new_anim = 'jump'
+			$Jump.play()
 		DEAD:
 			new_anim = "dead"
 			yield(get_tree().create_timer(3), "timeout")

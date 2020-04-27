@@ -43,6 +43,7 @@ func _on_Player_dead():
 
 func _on_Collectible_pickup():
 	score += 1
+	$CollectibleSound.play()
 	emit_signal('score_changed', score)
 
 func _on_Controls_goup():

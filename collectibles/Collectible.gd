@@ -17,7 +17,8 @@ func init(type, pos):
 
 func _ready():
 	var collShape = RectangleShape2D.new()
-	collShape.extents = Vector2(11, 11)
+	collShape.extents = Vector2($Sprite.texture.get_width()/2,
+								$Sprite.texture.get_height()/2)
 	$CollisionShape2D.shape = collShape
 
 func _on_Collectible_body_entered(body):
