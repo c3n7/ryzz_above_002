@@ -7,6 +7,7 @@ export (PackedScene) var player
 func _ready():
 	var p = player.instance()
 	p.spawn_pos = $PlayerSpawn.position
+	p.connect('life_changed', $CanvasLayer/HUD,'_on_Player_life_changed')
 	$Player.call_deferred("add_child", p)
 
 
