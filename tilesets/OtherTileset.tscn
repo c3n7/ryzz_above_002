@@ -1,0 +1,674 @@
+[gd_scene load_steps=133 format=2]
+
+[ext_resource path="res://assets/PNG/Other/lockRedBottom.png" type="Texture" id=1]
+[ext_resource path="res://assets/PNG/Other/plantTop_blue.png" type="Texture" id=2]
+[ext_resource path="res://assets/PNG/Other/lockGreenTop.png" type="Texture" id=3]
+[ext_resource path="res://assets/PNG/Other/fenceLeft.png" type="Texture" id=4]
+[ext_resource path="res://assets/PNG/Other/blockGreen_key.png" type="Texture" id=5]
+[ext_resource path="res://assets/PNG/Other/buttonRed_pressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/PNG/Other/plantDark_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/PNG/Other/blockGreen.png" type="Texture" id=8]
+[ext_resource path="res://assets/PNG/Other/blockBrown_broken.png" type="Texture" id=9]
+[ext_resource path="res://assets/PNG/Other/blockBrown.png" type="Texture" id=10]
+[ext_resource path="res://assets/PNG/Other/lockGreenRight.png" type="Texture" id=11]
+[ext_resource path="res://assets/PNG/Other/fenceOpen.png" type="Texture" id=12]
+[ext_resource path="res://assets/PNG/Other/fluidBlue_top.png" type="Texture" id=13]
+[ext_resource path="res://assets/PNG/Other/buttonFloor_pressed.png" type="Texture" id=14]
+[ext_resource path="res://assets/PNG/Other/plantDark_5.png" type="Texture" id=15]
+[ext_resource path="res://assets/PNG/Other/fence.png" type="Texture" id=16]
+[ext_resource path="res://assets/PNG/Other/fenceMid.png" type="Texture" id=17]
+[ext_resource path="res://assets/PNG/Other/lockGreenLeft.png" type="Texture" id=18]
+[ext_resource path="res://assets/PNG/Other/plantDark_6.png" type="Texture" id=19]
+[ext_resource path="res://assets/PNG/Other/lockRedLeft.png" type="Texture" id=20]
+[ext_resource path="res://assets/PNG/Other/ladderNarrow_top.png" type="Texture" id=21]
+[ext_resource path="res://assets/PNG/Other/plantLeaves_3.png" type="Texture" id=22]
+[ext_resource path="res://assets/PNG/Other/plantDark_3.png" type="Texture" id=23]
+[ext_resource path="res://assets/PNG/Other/doorGreen.png" type="Texture" id=24]
+[ext_resource path="res://assets/PNG/Other/fenceRight.png" type="Texture" id=25]
+[ext_resource path="res://assets/PNG/Other/blockGreen_puzzle.png" type="Texture" id=26]
+[ext_resource path="res://assets/PNG/Other/buttonGreen_pressed.png" type="Texture" id=27]
+[ext_resource path="res://assets/PNG/Other/blockGreen_lock.png" type="Texture" id=28]
+[ext_resource path="res://assets/PNG/Other/blockGrey.png" type="Texture" id=29]
+[ext_resource path="res://assets/PNG/Other/blockGrey_broken.png" type="Texture" id=30]
+[ext_resource path="res://assets/PNG/Other/blockRed.png" type="Texture" id=31]
+[ext_resource path="res://assets/PNG/Other/blockRed_key.png" type="Texture" id=32]
+[ext_resource path="res://assets/PNG/Other/blockRed_lock.png" type="Texture" id=33]
+[ext_resource path="res://assets/PNG/Other/blockRed_puzzle.png" type="Texture" id=34]
+[ext_resource path="res://assets/PNG/Other/flagRed_down.png" type="Texture" id=35]
+[ext_resource path="res://assets/PNG/Other/plantTop_leaves.png" type="Texture" id=36]
+[ext_resource path="res://assets/PNG/Other/plantBlue_5.png" type="Texture" id=37]
+[ext_resource path="res://assets/PNG/Other/plantRed_6.png" type="Texture" id=38]
+[ext_resource path="res://assets/PNG/Other/buttonRed.png" type="Texture" id=39]
+[ext_resource path="res://assets/PNG/Other/flagGreen_up.png" type="Texture" id=40]
+[ext_resource path="res://assets/PNG/Other/plantRed_5.png" type="Texture" id=41]
+[ext_resource path="res://assets/PNG/Other/lockRedLock.png" type="Texture" id=42]
+[ext_resource path="res://assets/PNG/Other/buttonGreen.png" type="Texture" id=43]
+[ext_resource path="res://assets/PNG/Other/plantDark_4.png" type="Texture" id=44]
+[ext_resource path="res://assets/PNG/Other/lockRed.png" type="Texture" id=45]
+[ext_resource path="res://assets/PNG/Other/fluidBrown.png" type="Texture" id=46]
+[ext_resource path="res://assets/PNG/Other/doorGreen_lock.png" type="Texture" id=47]
+[ext_resource path="res://assets/PNG/Other/doorGreen_top.png" type="Texture" id=48]
+[ext_resource path="res://assets/PNG/Other/fluidBlue.png" type="Texture" id=49]
+[ext_resource path="res://assets/PNG/Other/buttonFloor.png" type="Texture" id=50]
+[ext_resource path="res://assets/PNG/Other/plantRed_1.png" type="Texture" id=51]
+[ext_resource path="res://assets/PNG/Other/plantRed_4.png" type="Texture" id=52]
+[ext_resource path="res://assets/PNG/Other/plantBlue_3.png" type="Texture" id=53]
+[ext_resource path="res://assets/PNG/Other/plantBlue_4.png" type="Texture" id=54]
+[ext_resource path="res://assets/PNG/Other/lockGreenMid.png" type="Texture" id=55]
+[ext_resource path="res://assets/PNG/Other/plantStem_cornerRight.png" type="Texture" id=56]
+[ext_resource path="res://assets/PNG/Other/doorOpen.png" type="Texture" id=57]
+[ext_resource path="res://assets/PNG/Other/doorOpen_top.png" type="Texture" id=58]
+[ext_resource path="res://assets/PNG/Other/doorRed.png" type="Texture" id=59]
+[ext_resource path="res://assets/PNG/Other/doorRed_lock.png" type="Texture" id=60]
+[ext_resource path="res://assets/PNG/Other/doorRed_top.png" type="Texture" id=61]
+[ext_resource path="res://assets/PNG/Other/fenceBroken.png" type="Texture" id=62]
+[ext_resource path="res://assets/PNG/Other/lockGreen.png" type="Texture" id=63]
+[ext_resource path="res://assets/PNG/Other/ladderWide_mid.png" type="Texture" id=64]
+[ext_resource path="res://assets/PNG/Other/ladderWide_top.png" type="Texture" id=65]
+[ext_resource path="res://assets/PNG/Other/plantStem_vertical.png" type="Texture" id=66]
+[ext_resource path="res://assets/PNG/Other/flagGreen_down.png" type="Texture" id=67]
+[ext_resource path="res://assets/PNG/Other/flagRed_up.png" type="Texture" id=68]
+[ext_resource path="res://assets/PNG/Other/plantLeaves_1.png" type="Texture" id=69]
+[ext_resource path="res://assets/PNG/Other/lockGreenLock.png" type="Texture" id=70]
+[ext_resource path="res://assets/PNG/Other/plantRed_3.png" type="Texture" id=71]
+[ext_resource path="res://assets/PNG/Other/lockGreenBottom.png" type="Texture" id=72]
+[ext_resource path="res://assets/PNG/Other/fluidBrown_top.png" type="Texture" id=73]
+[ext_resource path="res://assets/PNG/Other/fluidGreen_top.png" type="Texture" id=74]
+[ext_resource path="res://assets/PNG/Other/fluidGreen.png" type="Texture" id=75]
+[ext_resource path="res://assets/PNG/Other/fluidRed.png" type="Texture" id=76]
+[ext_resource path="res://assets/PNG/Other/fluidRed_top.png" type="Texture" id=77]
+[ext_resource path="res://assets/PNG/Other/plantStem_cornerLeft.png" type="Texture" id=78]
+[ext_resource path="res://assets/PNG/Other/plantStem_Tleft.png" type="Texture" id=79]
+[ext_resource path="res://assets/PNG/Other/plantBlue_1.png" type="Texture" id=80]
+[ext_resource path="res://assets/PNG/Other/ladderNarrow_mid.png" type="Texture" id=81]
+[ext_resource path="res://assets/PNG/Other/plantBlue_2.png" type="Texture" id=82]
+[ext_resource path="res://assets/PNG/Other/plantBottom_1.png" type="Texture" id=83]
+[ext_resource path="res://assets/PNG/Other/plantStem_Tright.png" type="Texture" id=84]
+[ext_resource path="res://assets/PNG/Other/plantBlue_6.png" type="Texture" id=85]
+[ext_resource path="res://assets/PNG/Other/plantBottom_2.png" type="Texture" id=86]
+[ext_resource path="res://assets/PNG/Other/lockRedMid.png" type="Texture" id=87]
+[ext_resource path="res://assets/PNG/Other/lockRedRight.png" type="Texture" id=88]
+[ext_resource path="res://assets/PNG/Other/lockRedTop.png" type="Texture" id=89]
+[ext_resource path="res://assets/PNG/Other/plantDark_2.png" type="Texture" id=90]
+[ext_resource path="res://assets/PNG/Other/plantStem_cross.png" type="Texture" id=91]
+[ext_resource path="res://assets/PNG/Other/plantGreen_1.png" type="Texture" id=92]
+[ext_resource path="res://assets/PNG/Other/plantStem_horizontal.png" type="Texture" id=93]
+[ext_resource path="res://assets/PNG/Other/plantThorns_vertical.png" type="Texture" id=94]
+[ext_resource path="res://assets/PNG/Other/plantGreen_5.png" type="Texture" id=95]
+[ext_resource path="res://assets/PNG/Other/plantTop_red.png" type="Texture" id=96]
+[ext_resource path="res://assets/PNG/Other/plantRed_2.png" type="Texture" id=97]
+[ext_resource path="res://assets/PNG/Other/plantGreen_3.png" type="Texture" id=98]
+[ext_resource path="res://assets/PNG/Other/plantGreen_2.png" type="Texture" id=99]
+[ext_resource path="res://assets/PNG/Other/plantGreen_4.png" type="Texture" id=100]
+[ext_resource path="res://assets/PNG/Other/plantGreen_6.png" type="Texture" id=101]
+[ext_resource path="res://assets/PNG/Other/plantThorns_horizontal.png" type="Texture" id=102]
+[ext_resource path="res://assets/PNG/Other/plantTop_yellow.png" type="Texture" id=103]
+[ext_resource path="res://assets/PNG/Other/signpost.png" type="Texture" id=104]
+[ext_resource path="res://assets/PNG/Other/signArrow_up.png" type="Texture" id=105]
+[ext_resource path="res://assets/PNG/Other/signArrow_TR.png" type="Texture" id=106]
+[ext_resource path="res://assets/PNG/Other/signLarge.png" type="Texture" id=107]
+[ext_resource path="res://assets/PNG/Other/signArrow_TL.png" type="Texture" id=108]
+[ext_resource path="res://assets/PNG/Other/signArrow_right.png" type="Texture" id=109]
+[ext_resource path="res://assets/PNG/Other/signArrow_left.png" type="Texture" id=110]
+[ext_resource path="res://assets/PNG/Other/signArrow_down.png" type="Texture" id=111]
+[ext_resource path="res://assets/PNG/Other/signArrow_BL.png" type="Texture" id=112]
+[ext_resource path="res://assets/PNG/Other/signArrow_BR.png" type="Texture" id=113]
+[ext_resource path="res://assets/PNG/Other/signArrow.png" type="Texture" id=114]
+[ext_resource path="res://assets/PNG/Other/signSmall.png" type="Texture" id=115]
+[ext_resource path="res://assets/PNG/Other/switchGreen_left.png" type="Texture" id=116]
+[ext_resource path="res://assets/PNG/Other/switchRed_mid.png" type="Texture" id=117]
+[ext_resource path="res://assets/PNG/Other/switchRed_right.png" type="Texture" id=118]
+[ext_resource path="res://assets/PNG/Other/switchGreen_on.png" type="Texture" id=119]
+[ext_resource path="res://assets/PNG/Other/switchGreen_off.png" type="Texture" id=120]
+[ext_resource path="res://assets/PNG/Other/spikesLow.png" type="Texture" id=121]
+[ext_resource path="res://assets/PNG/Other/switchRed_left.png" type="Texture" id=122]
+[ext_resource path="res://assets/PNG/Other/switchGreen_right.png" type="Texture" id=123]
+[ext_resource path="res://assets/PNG/Other/switchGreen_mid.png" type="Texture" id=124]
+[ext_resource path="res://assets/PNG/Other/switchRed_on.png" type="Texture" id=125]
+[ext_resource path="res://assets/PNG/Other/switchRed_off.png" type="Texture" id=126]
+[ext_resource path="res://assets/PNG/Other/spikesHigh.png" type="Texture" id=127]
+[ext_resource path="res://assets/PNG/Other/vine_bottom.png" type="Texture" id=128]
+[ext_resource path="res://assets/PNG/Other/vine_bottomAlt.png" type="Texture" id=129]
+[ext_resource path="res://assets/PNG/Other/vine.png" type="Texture" id=130]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27.2823, 11.3307 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28.835, 10 )
+
+[node name="OtherTileset" type="Node2D"]
+
+[node name="blockBrown" type="Sprite" parent="."]
+position = Vector2( 32, 512 )
+texture = ExtResource( 10 )
+
+[node name="blockBrown_broken" type="Sprite" parent="."]
+position = Vector2( 112, 512 )
+texture = ExtResource( 9 )
+
+[node name="blockGreen" type="Sprite" parent="."]
+position = Vector2( 432, 608 )
+texture = ExtResource( 8 )
+
+[node name="blockGreen_key" type="Sprite" parent="."]
+position = Vector2( 352, 608 )
+texture = ExtResource( 5 )
+
+[node name="blockGreen_lock" type="Sprite" parent="."]
+position = Vector2( 272, 608 )
+texture = ExtResource( 28 )
+
+[node name="blockGreen_puzzle" type="Sprite" parent="."]
+position = Vector2( 192, 608 )
+texture = ExtResource( 26 )
+
+[node name="blockGrey" type="Sprite" parent="."]
+position = Vector2( 32, 608 )
+texture = ExtResource( 29 )
+
+[node name="blockGrey_broken" type="Sprite" parent="."]
+position = Vector2( 112, 608 )
+texture = ExtResource( 30 )
+
+[node name="blockRed" type="Sprite" parent="."]
+position = Vector2( 432, 512 )
+texture = ExtResource( 31 )
+
+[node name="blockRed_key" type="Sprite" parent="."]
+position = Vector2( 352, 512 )
+texture = ExtResource( 32 )
+
+[node name="blockRed_lock" type="Sprite" parent="."]
+position = Vector2( 272, 512 )
+texture = ExtResource( 33 )
+
+[node name="blockRed_puzzle" type="Sprite" parent="."]
+position = Vector2( 192, 512 )
+texture = ExtResource( 34 )
+
+[node name="buttonFloor" type="Sprite" parent="."]
+position = Vector2( 152, 672 )
+texture = ExtResource( 50 )
+
+[node name="buttonFloor_pressed" type="Sprite" parent="."]
+position = Vector2( 64, 672 )
+texture = ExtResource( 14 )
+
+[node name="buttonGreen" type="Sprite" parent="."]
+position = Vector2( 216, 664 )
+texture = ExtResource( 43 )
+
+[node name="buttonGreen_pressed" type="Sprite" parent="."]
+position = Vector2( 280, 672 )
+texture = ExtResource( 27 )
+
+[node name="buttonRed" type="Sprite" parent="."]
+position = Vector2( 352, 664 )
+texture = ExtResource( 39 )
+
+[node name="buttonRed_pressed" type="Sprite" parent="."]
+position = Vector2( 424, 664 )
+texture = ExtResource( 6 )
+
+[node name="fence" type="Sprite" parent="."]
+position = Vector2( 408, 816 )
+texture = ExtResource( 16 )
+
+[node name="fenceBroken" type="Sprite" parent="."]
+position = Vector2( 32, 816 )
+texture = ExtResource( 62 )
+
+[node name="fenceLeft" type="Sprite" parent="."]
+position = Vector2( 328, 816 )
+texture = ExtResource( 4 )
+
+[node name="fenceMid" type="Sprite" parent="."]
+position = Vector2( 256, 816 )
+texture = ExtResource( 17 )
+
+[node name="fenceOpen" type="Sprite" parent="."]
+position = Vector2( 176, 816 )
+texture = ExtResource( 12 )
+
+[node name="fenceRight" type="Sprite" parent="."]
+position = Vector2( 104, 816 )
+texture = ExtResource( 25 )
+
+[node name="doorGreen" type="Sprite" parent="."]
+position = Vector2( 32, 736 )
+texture = ExtResource( 24 )
+
+[node name="doorGreen_lock" type="Sprite" parent="."]
+position = Vector2( 536, 736 )
+texture = ExtResource( 47 )
+
+[node name="doorGreen_top" type="Sprite" parent="."]
+position = Vector2( 464, 736 )
+texture = ExtResource( 48 )
+
+[node name="doorOpen" type="Sprite" parent="."]
+position = Vector2( 392, 736 )
+texture = ExtResource( 57 )
+
+[node name="doorOpen_top" type="Sprite" parent="."]
+position = Vector2( 320, 736 )
+texture = ExtResource( 58 )
+
+[node name="doorRed" type="Sprite" parent="."]
+position = Vector2( 248, 736 )
+texture = ExtResource( 59 )
+
+[node name="doorRed_lock" type="Sprite" parent="."]
+position = Vector2( 176, 736 )
+texture = ExtResource( 60 )
+
+[node name="doorRed_top" type="Sprite" parent="."]
+position = Vector2( 104, 736 )
+texture = ExtResource( 61 )
+
+[node name="flagGreen_down" type="Sprite" parent="."]
+position = Vector2( 32, 880 )
+texture = ExtResource( 67 )
+
+[node name="flagGreen_up" type="Sprite" parent="."]
+position = Vector2( 224, 880 )
+texture = ExtResource( 40 )
+
+[node name="flagRed_down" type="Sprite" parent="."]
+position = Vector2( 168, 880 )
+texture = ExtResource( 35 )
+
+[node name="flagRed_up" type="Sprite" parent="."]
+position = Vector2( 112, 880 )
+texture = ExtResource( 68 )
+
+[node name="ladderNarrow_mid" type="Sprite" parent="."]
+position = Vector2( 280, 432 )
+texture = ExtResource( 81 )
+
+[node name="ladderNarrow_top" type="Sprite" parent="."]
+position = Vector2( 32, 432 )
+texture = ExtResource( 21 )
+
+[node name="ladderWide_mid" type="Sprite" parent="."]
+position = Vector2( 192, 432 )
+texture = ExtResource( 64 )
+
+[node name="ladderWide_top" type="Sprite" parent="."]
+position = Vector2( 112, 432 )
+texture = ExtResource( 65 )
+
+[node name="fluidBlue" type="Sprite" parent="."]
+position = Vector2( 536, 960 )
+texture = ExtResource( 49 )
+
+[node name="fluidBlue_top" type="Sprite" parent="."]
+position = Vector2( 464, 960 )
+texture = ExtResource( 13 )
+
+[node name="fluidBrown" type="Sprite" parent="."]
+position = Vector2( 392, 960 )
+texture = ExtResource( 46 )
+
+[node name="fluidBrown_top" type="Sprite" parent="."]
+position = Vector2( 320, 960 )
+texture = ExtResource( 73 )
+
+[node name="fluidGreen" type="Sprite" parent="."]
+position = Vector2( 104, 960 )
+texture = ExtResource( 75 )
+
+[node name="fluidGreen_top" type="Sprite" parent="."]
+position = Vector2( 32, 960 )
+texture = ExtResource( 74 )
+
+[node name="fluidRed" type="Sprite" parent="."]
+position = Vector2( 176, 960 )
+texture = ExtResource( 76 )
+
+[node name="fluidRed_top" type="Sprite" parent="."]
+position = Vector2( 248, 960 )
+texture = ExtResource( 77 )
+
+[node name="lockGreen" type="Sprite" parent="."]
+position = Vector2( 32, 360 )
+texture = ExtResource( 63 )
+
+[node name="lockGreenBottom" type="Sprite" parent="."]
+position = Vector2( 488, 360 )
+texture = ExtResource( 72 )
+
+[node name="lockGreenLeft" type="Sprite" parent="."]
+position = Vector2( 416, 360 )
+texture = ExtResource( 18 )
+
+[node name="lockGreenLock" type="Sprite" parent="."]
+position = Vector2( 344, 360 )
+texture = ExtResource( 70 )
+
+[node name="lockGreenMid" type="Sprite" parent="."]
+position = Vector2( 272, 360 )
+texture = ExtResource( 55 )
+
+[node name="lockGreenRight" type="Sprite" parent="."]
+position = Vector2( 192, 360 )
+texture = ExtResource( 11 )
+
+[node name="lockGreenTop" type="Sprite" parent="."]
+position = Vector2( 112, 360 )
+texture = ExtResource( 3 )
+
+[node name="lockRed" type="Sprite" parent="."]
+position = Vector2( 32, 280 )
+texture = ExtResource( 45 )
+
+[node name="lockRedBottom" type="Sprite" parent="."]
+position = Vector2( 488, 280 )
+texture = ExtResource( 1 )
+
+[node name="lockRedLeft" type="Sprite" parent="."]
+position = Vector2( 416, 280 )
+texture = ExtResource( 20 )
+
+[node name="lockRedLock" type="Sprite" parent="."]
+position = Vector2( 344, 280 )
+texture = ExtResource( 42 )
+
+[node name="lockRedMid" type="Sprite" parent="."]
+position = Vector2( 272, 280 )
+texture = ExtResource( 87 )
+
+[node name="lockRedRight" type="Sprite" parent="."]
+position = Vector2( 192, 280 )
+texture = ExtResource( 88 )
+
+[node name="lockRedTop" type="Sprite" parent="."]
+position = Vector2( 112, 280 )
+texture = ExtResource( 89 )
+
+[node name="plantBlue_1" type="Sprite" parent="."]
+position = Vector2( 16, 208 )
+texture = ExtResource( 80 )
+
+[node name="plantBlue_2" type="Sprite" parent="."]
+position = Vector2( 272, 216 )
+texture = ExtResource( 82 )
+
+[node name="plantBlue_3" type="Sprite" parent="."]
+position = Vector2( 216, 216 )
+texture = ExtResource( 53 )
+
+[node name="plantBlue_4" type="Sprite" parent="."]
+position = Vector2( 168, 208 )
+texture = ExtResource( 54 )
+
+[node name="plantBlue_5" type="Sprite" parent="."]
+position = Vector2( 128, 224 )
+texture = ExtResource( 37 )
+
+[node name="plantBlue_6" type="Sprite" parent="."]
+position = Vector2( 80, 216 )
+texture = ExtResource( 85 )
+
+[node name="plantDark_1" type="Sprite" parent="."]
+position = Vector2( 16, 152 )
+texture = ExtResource( 7 )
+
+[node name="plantDark_2" type="Sprite" parent="."]
+position = Vector2( 272, 160 )
+texture = ExtResource( 90 )
+
+[node name="plantDark_3" type="Sprite" parent="."]
+position = Vector2( 224, 152 )
+texture = ExtResource( 23 )
+
+[node name="plantDark_4" type="Sprite" parent="."]
+position = Vector2( 168, 152 )
+texture = ExtResource( 44 )
+
+[node name="plantDark_5" type="Sprite" parent="."]
+position = Vector2( 120, 160 )
+texture = ExtResource( 15 )
+
+[node name="plantDark_6" type="Sprite" parent="."]
+position = Vector2( 72, 160 )
+texture = ExtResource( 19 )
+
+[node name="plantGreen_1" type="Sprite" parent="."]
+position = Vector2( 24, 96 )
+texture = ExtResource( 92 )
+
+[node name="plantGreen_2" type="Sprite" parent="."]
+position = Vector2( 280, 104 )
+texture = ExtResource( 99 )
+
+[node name="plantGreen_3" type="Sprite" parent="."]
+position = Vector2( 232, 104 )
+texture = ExtResource( 98 )
+
+[node name="plantGreen_4" type="Sprite" parent="."]
+position = Vector2( 128, 96 )
+texture = ExtResource( 100 )
+
+[node name="plantGreen_5" type="Sprite" parent="."]
+position = Vector2( 176, 96 )
+texture = ExtResource( 95 )
+
+[node name="plantGreen_6" type="Sprite" parent="."]
+position = Vector2( 80, 96 )
+texture = ExtResource( 101 )
+
+[node name="plantBottom_1" type="Sprite" parent="."]
+position = Vector2( 344, 160 )
+texture = ExtResource( 83 )
+
+[node name="plantBottom_2" type="Sprite" parent="."]
+position = Vector2( 400, 160 )
+texture = ExtResource( 86 )
+
+[node name="plantLeaves_1" type="Sprite" parent="."]
+position = Vector2( 440, 160 )
+texture = ExtResource( 69 )
+
+[node name="plantLeaves_3" type="Sprite" parent="."]
+position = Vector2( 488, 160 )
+texture = ExtResource( 22 )
+
+[node name="plantRed_1" type="Sprite" parent="."]
+position = Vector2( 24, 40 )
+texture = ExtResource( 51 )
+
+[node name="plantRed_2" type="Sprite" parent="."]
+position = Vector2( 280, 40 )
+texture = ExtResource( 97 )
+
+[node name="plantRed_3" type="Sprite" parent="."]
+position = Vector2( 184, 40 )
+texture = ExtResource( 71 )
+
+[node name="plantRed_4" type="Sprite" parent="."]
+position = Vector2( 232, 40 )
+texture = ExtResource( 52 )
+
+[node name="plantRed_5" type="Sprite" parent="."]
+position = Vector2( 136, 40 )
+texture = ExtResource( 41 )
+
+[node name="plantRed_6" type="Sprite" parent="."]
+position = Vector2( 80, 32 )
+texture = ExtResource( 38 )
+
+[node name="plantStem_cornerLeft" type="Sprite" parent="."]
+position = Vector2( 680, 136 )
+texture = ExtResource( 78 )
+
+[node name="plantStem_cornerRight" type="Sprite" parent="."]
+position = Vector2( 560, 88 )
+texture = ExtResource( 56 )
+
+[node name="plantStem_cross" type="Sprite" parent="."]
+position = Vector2( 440, 80 )
+texture = ExtResource( 91 )
+
+[node name="plantStem_horizontal" type="Sprite" parent="."]
+position = Vector2( 352, 80 )
+texture = ExtResource( 93 )
+
+[node name="plantStem_Tleft" type="Sprite" parent="."]
+position = Vector2( 504, 80 )
+texture = ExtResource( 79 )
+
+[node name="plantStem_Tright" type="Sprite" parent="."]
+position = Vector2( 544, 160 )
+texture = ExtResource( 84 )
+
+[node name="plantStem_vertical" type="Sprite" parent="."]
+position = Vector2( 400, 80 )
+texture = ExtResource( 66 )
+
+[node name="plantThorns_horizontal" type="Sprite" parent="."]
+position = Vector2( 360, 16 )
+texture = ExtResource( 102 )
+
+[node name="plantThorns_vertical" type="Sprite" parent="."]
+position = Vector2( 624, 144 )
+texture = ExtResource( 94 )
+
+[node name="plantTop_blue" type="Sprite" parent="."]
+position = Vector2( 640, 72 )
+texture = ExtResource( 2 )
+
+[node name="plantTop_leaves" type="Sprite" parent="."]
+position = Vector2( 584, 16 )
+texture = ExtResource( 36 )
+
+[node name="plantTop_red" type="Sprite" parent="."]
+position = Vector2( 512, 0 )
+texture = ExtResource( 96 )
+
+[node name="plantTop_yellow" type="Sprite" parent="."]
+position = Vector2( 432, 0 )
+texture = ExtResource( 103 )
+
+[node name="signArrow" type="Sprite" parent="."]
+position = Vector2( -224, 248 )
+texture = ExtResource( 114 )
+
+[node name="signArrow_BL" type="Sprite" parent="."]
+position = Vector2( -288, 248 )
+texture = ExtResource( 112 )
+
+[node name="signArrow_BR" type="Sprite" parent="."]
+position = Vector2( -288, 96 )
+texture = ExtResource( 113 )
+
+[node name="signArrow_down" type="Sprite" parent="."]
+position = Vector2( -288, 176 )
+texture = ExtResource( 111 )
+
+[node name="signArrow_left" type="Sprite" parent="."]
+position = Vector2( -104, 176 )
+texture = ExtResource( 110 )
+
+[node name="signArrow_right" type="Sprite" parent="."]
+position = Vector2( -160, 176 )
+texture = ExtResource( 109 )
+
+[node name="signArrow_TL" type="Sprite" parent="."]
+position = Vector2( -208, 176 )
+texture = ExtResource( 108 )
+
+[node name="signArrow_TR" type="Sprite" parent="."]
+position = Vector2( -88, 104 )
+texture = ExtResource( 106 )
+
+[node name="signArrow_up" type="Sprite" parent="."]
+position = Vector2( -232, 96 )
+texture = ExtResource( 105 )
+
+[node name="signLarge" type="Sprite" parent="."]
+position = Vector2( -160, 104 )
+texture = ExtResource( 107 )
+
+[node name="signpost" type="Sprite" parent="."]
+position = Vector2( -248, 176 )
+texture = ExtResource( 104 )
+
+[node name="signSmall" type="Sprite" parent="."]
+position = Vector2( -160, 248 )
+texture = ExtResource( 115 )
+
+[node name="spikesHigh" type="Sprite" parent="."]
+position = Vector2( -339.37, 319.914 )
+texture = ExtResource( 127 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 30 )
+
+[node name="Area2D" type="Area2D" parent="spikesHigh"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikesHigh/Area2D"]
+position = Vector2( 0.277405, 3.32864 )
+shape = SubResource( 1 )
+
+[node name="spikesLow" type="Sprite" parent="."]
+position = Vector2( -216, 328 )
+texture = ExtResource( 121 )
+
+[node name="Area2D" type="Area2D" parent="spikesLow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikesLow/Area2D"]
+position = Vector2( -0.27739, 2.77393 )
+shape = SubResource( 2 )
+
+[node name="switchGreen_left" type="Sprite" parent="."]
+position = Vector2( -392, 464 )
+texture = ExtResource( 116 )
+
+[node name="switchGreen_mid" type="Sprite" parent="."]
+position = Vector2( -344, 456 )
+texture = ExtResource( 124 )
+
+[node name="switchGreen_off" type="Sprite" parent="."]
+position = Vector2( -72, 392 )
+texture = ExtResource( 120 )
+
+[node name="switchGreen_on" type="Sprite" parent="."]
+position = Vector2( -104, 392 )
+texture = ExtResource( 119 )
+
+[node name="switchGreen_right" type="Sprite" parent="."]
+position = Vector2( -288, 464 )
+texture = ExtResource( 123 )
+
+[node name="switchRed_left" type="Sprite" parent="."]
+position = Vector2( -192, 464 )
+texture = ExtResource( 122 )
+
+[node name="switchRed_mid" type="Sprite" parent="."]
+position = Vector2( -144, 456 )
+texture = ExtResource( 117 )
+
+[node name="switchRed_off" type="Sprite" parent="."]
+position = Vector2( -144, 392 )
+texture = ExtResource( 126 )
+
+[node name="switchRed_on" type="Sprite" parent="."]
+position = Vector2( -176, 392 )
+texture = ExtResource( 125 )
+
+[node name="switchRed_right" type="Sprite" parent="."]
+position = Vector2( -96, 464 )
+texture = ExtResource( 118 )
+
+[node name="vine" type="Sprite" parent="."]
+position = Vector2( 648, 224 )
+texture = ExtResource( 130 )
+
+[node name="vine_bottom" type="Sprite" parent="."]
+position = Vector2( 736, 240 )
+texture = ExtResource( 128 )
+
+[node name="vine_bottomAlt" type="Sprite" parent="."]
+position = Vector2( 696, 232 )
+texture = ExtResource( 129 )

@@ -41,7 +41,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingRight"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingRight/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 48, 0, 48, 0, 0 )
+polygon = PoolVector2Array( 64, 16, 64, 48, 0, 48, 0, 0, 56, 0 )
 
 [node name="floatingSolo" type="Sprite" parent="."]
 position = Vector2( 304, 0 )
@@ -54,7 +54,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingSolo"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingSolo/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 48, 0, 48, 0, 0 )
+polygon = PoolVector2Array( 64, 16, 64, 48, 0, 48, 0, 16, 8, 0, 56, 0 )
 
 [node name="fillPlain" type="Sprite" parent="."]
 position = Vector2( 0, 144 )
@@ -127,7 +127,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="groundSolo"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="groundSolo/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
+polygon = PoolVector2Array( 64, 16, 64, 64, 0, 64, 0, 16, 8, 0, 56, 0 )
 
 [node name="fillAlt1" type="Sprite" parent="."]
 position = Vector2( 88, 144 )
@@ -216,7 +216,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingLeftRound"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingLeftRound/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
+polygon = PoolVector2Array( 64, 0, 64, 64, 40, 64, 16, 56, 0, 32, 0, 16, 8, 0 )
 
 [node name="floatingRightRound" type="Sprite" parent="."]
 position = Vector2( 88, 400 )
@@ -229,7 +229,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingRightRound"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingRightRound/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
+polygon = PoolVector2Array( 64, 0, 64, 36.2751, 48, 56, 24, 64, 0, 64, 0, 0 )
 
 [node name="fillPlainAlt2" type="Sprite" parent="."]
 position = Vector2( 184, 144 )
@@ -328,7 +328,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingAngledLeft"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingAngledLeft/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 64, 0, 32, 0, 0 )
+polygon = PoolVector2Array( 64, 0, 64, 64, 0, 32, 0, 16, 8, 0 )
 
 [node name="floatingAngledRight" type="Sprite" parent="."]
 position = Vector2( 112, 576 )
@@ -341,7 +341,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingAngledRight"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingAngledRight/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 24, 0, 64, 0, 0 )
+polygon = PoolVector2Array( 64, 16, 64, 24, 0, 64, 0, 0, 56, 0 )
 
 [node name="floatingLeft" type="Sprite" parent="."]
 texture = ExtResource( 26 )
@@ -353,7 +353,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="floatingLeft"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floatingLeft/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 48, 0, 48, 0, 0 )
+polygon = PoolVector2Array( 64, 0, 64, 48, 0, 48, 0, 16.2884, 8, 0 )
 
 [node name="floatingMid" type="Sprite" parent="."]
 position = Vector2( 88, 0 )

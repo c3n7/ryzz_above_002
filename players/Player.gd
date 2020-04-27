@@ -1,5 +1,9 @@
 extends KinematicBody2D
 
+signal life_changed
+signal dead
+
+
 export (int) var horizontal_velocity
 export (int) var upward_velocity
 export (int) var gravity_constant
@@ -15,8 +19,11 @@ var spawn_pos
 var jumpnow = false
 var goright = false
 var goleft = false
+var life
 
 func start():
+	life = 3
+	emit_signal('life_changed', life)
 	position = spawn_pos
 	show()
 	change_state(IDLE)
@@ -30,9 +37,20 @@ func change_state(new_state):
 			new_anim = 'run'
 		HURT:
 			new_anim = 'hurt'
+			velocity.y = -600
+			velocity.x = -100 * sign(velocity.x)
+			life -= 1
+			emit_signal('life_changed', life)
+			yield(get_tree().create_timer(0.5), 'timeout')
+			change_state(IDLE)
+			if life <= 0:
+				change_state(DEAD)
 		JUMP:
 			new_anim = 'jump'
 		DEAD:
+			$AnimatedSprite.play("dead")
+			yield(get_tree().create_timer(0.5), "timeout")
+			emit_signal('dead')
 			hide()
 
 func move_in_direction(dir):
@@ -51,6 +69,10 @@ func cancel_move_in_direction(dir):
 			goright = false
 		"left":
 			goleft = false
+
+func hurt():
+	if state != HURT:
+		change_state(HURT)
 
 func get_input():
 	if state == HURT:
@@ -108,4 +130,10 @@ func _physics_process(delta):
 		change_state(IDLE)
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
-
+	
+	if state == HURT:
+		return;
+	for idx in range(get_slide_count()):
+		var collision = get_slide_collision(idx)
+		if collision.collider.name == 'Danger':
+			hurt()
