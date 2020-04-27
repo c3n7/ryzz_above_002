@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Project Ryzz Rad Wi 002"
+config/name="Ryzz 002"
 run/main_scene="res://levels/Blue/BlueLevel01.tscn"
 config/icon="res://assets/PNG/Players/Player Blue/playerBlue_walk4.png"
 

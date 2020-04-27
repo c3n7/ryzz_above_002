@@ -46,7 +46,6 @@ func change_state(new_state):
 				change_state(DEAD)
 		JUMP:
 			new_anim = 'jump'
-			$Jump.play()
 		DEAD:
 			new_anim = "dead"
 			yield(get_tree().create_timer(3), "timeout")
@@ -102,6 +101,7 @@ func get_input():
 	if jump || jumpnow: 
 		if is_on_floor():
 			jumpnow = false
+			$Jump.play()
 			change_state(JUMP)
 			velocity.y = upward_velocity
 	# IDLE transitions to RUN when moving
