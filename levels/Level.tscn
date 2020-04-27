@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/Controls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/Level.gd" type="Script" id=2]
 [ext_resource path="res://assets/Tilesheet/tilesheet_complete_2X.png" type="Texture" id=3]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Tilesheet/tilesheet_complete.png" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
@@ -391,6 +392,22 @@ points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
 } ]
 25/z_index = 0
 
+[sub_resource type="TileSet" id=5]
+1/name = "blueGem"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 848, 16, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
 [node name="Level" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -436,6 +453,13 @@ scale = Vector2( 0.5, 0.5 )
 tile_set = SubResource( 4 )
 format = 1
 
+[node name="Collectibles" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 8
+collision_mask = 4
+format = 1
+
 [node name="Player" type="Node2D" parent="."]
 
 [node name="PlayerSpawn" type="Position2D" parent="."]
@@ -445,6 +469,7 @@ format = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 4 )]
+[connection signal="score_changed" from="." to="CanvasLayer/HUD" method="_on_score_changed"]
 [connection signal="goingleft" from="Controls" to="." method="_on_Controls_goingleft"]
 [connection signal="goingright" from="Controls" to="." method="_on_Controls_goingright"]
 [connection signal="goup" from="Controls" to="." method="_on_Controls_goup"]

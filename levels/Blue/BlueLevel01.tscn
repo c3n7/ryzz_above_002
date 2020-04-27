@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilesets/worlds/blueworldtileset.tres" type="TileSet" id=2]
@@ -6,9 +6,11 @@
 [ext_resource path="res://assets/PNG/Backgrounds/set1_background.png" type="Texture" id=4]
 [ext_resource path="res://assets/PNG/Backgrounds/set1_tiles.png" type="Texture" id=5]
 [ext_resource path="res://assets/PNG/Backgrounds/set1_hills.png" type="Texture" id=6]
+[ext_resource path="res://collectibles/Collectible.tscn" type="PackedScene" id=7]
 
 [node name="BlueLevel01" instance=ExtResource( 1 )]
 player = ExtResource( 3 )
+Collectible = ExtResource( 7 )
 
 [node name="Sprite" parent="ParallaxBackground/Background" index="0"]
 texture = ExtResource( 4 )
@@ -27,5 +29,8 @@ tile_data = PoolIntArray( -327680, 7, 0, -262144, 3, 0, -196608, 3, 0, -131072, 
 cell_size = Vector2( 32, 32 )
 tile_data = PoolIntArray( 786437, 15, 0, 1179679, 25, 0, 1179687, 16, 0, 1179691, 24, 0, 1703957, 14, 0 )
 
-[node name="PlayerSpawn" parent="." index="4"]
+[node name="Collectibles" parent="." index="3"]
+tile_data = PoolIntArray( -655277, 0, 0, -655273, 0, 0, -655269, 0, 0, -393133, 0, 0, -393129, 0, 0, -393125, 0, 0, 65549, 1, 0, 262195, 0, 0, 393222, 1, 0, 393223, 1, 0, 458758, 1, 0, 458759, 1, 0, 786441, 1, 0, 786442, 1, 0, 851977, 1, 0, 851978, 1, 0, 3211304, 0, 0 )
+
+[node name="PlayerSpawn" parent="." index="5"]
 position = Vector2( 128, 40 )
