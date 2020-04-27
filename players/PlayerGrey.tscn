@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://players/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_walk4.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_hit.png" type="Texture" id=11]
 [ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_fall.png" type="Texture" id=12]
 [ext_resource path="res://players/PlayerGrey.gd" type="Script" id=13]
+[ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_dead.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,6 +27,11 @@ animations = [ {
 "name": "run",
 "speed": 24.0
 }, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "jump",
+"speed": 20.0
+}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": false,
 "name": "fall",
@@ -36,10 +42,10 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": false,
-"name": "jump",
-"speed": 20.0
+"name": "dead",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -50,8 +56,6 @@ script = ExtResource( 13 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
-animation = "run"
-frame = 4
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource( 2 )

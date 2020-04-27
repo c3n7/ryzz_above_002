@@ -5,10 +5,10 @@
 [ext_resource path="res://assets/Tilesheet/tilesheet_complete_2X.png" type="Texture" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 128, 64, 0, 64, 0, 0, 128, 0 )
+points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 128, 64, 0, 64, 0, 0, 128, 0 )
+points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "plantRed1"

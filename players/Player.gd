@@ -38,7 +38,6 @@ func change_state(new_state):
 		HURT:
 			new_anim = 'hurt'
 			velocity.y = -600
-			velocity.x = -100 * sign(velocity.x)
 			life -= 1
 			emit_signal('life_changed', life)
 			yield(get_tree().create_timer(0.5), 'timeout')
@@ -48,8 +47,8 @@ func change_state(new_state):
 		JUMP:
 			new_anim = 'jump'
 		DEAD:
-			$AnimatedSprite.play("dead")
-			yield(get_tree().create_timer(0.5), "timeout")
+			new_anim = "dead"
+			yield(get_tree().create_timer(3), "timeout")
 			emit_signal('dead')
 			hide()
 
@@ -75,14 +74,15 @@ func hurt():
 		change_state(HURT)
 
 func get_input():
-	if state == HURT:
-		return # don't allow movement during hurt state
+	if state == DEAD:
+		return # don't allow movement during dead state
 
 	var right = Input.is_action_pressed("right")
 	var left = Input.is_action_pressed("left")
 	var jump = Input.is_action_just_pressed("jump")
 
 	# horizontal movement in all states
+
 	velocity.x = 0
 #	print(horizontal_velocity)
 	if state == JUMP and !is_on_floor() and !velocity.y > 0:
@@ -115,7 +115,10 @@ func get_input():
 
 
 func _physics_process(delta):
-
+	# Just in case the guy was in the air
+	# if dead, x velocity should be zero
+	if state == DEAD:
+		velocity.x = 0
 	velocity.y += gravity_constant * delta
 	get_input()
 
@@ -131,8 +134,9 @@ func _physics_process(delta):
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
 	
-	if state == HURT:
-		return;
+
+	if state in [HURT, DEAD]:
+		return;	
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
 		if collision.collider.name == 'Danger':
