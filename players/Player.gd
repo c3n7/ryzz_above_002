@@ -11,7 +11,15 @@ var anim
 var new_anim
 var velocity = Vector2()
 var run_speed = 0
+var spawn_pos
+var jumpnow = false
+var goright = false
+var goleft = false
 
+func start():
+	position = spawn_pos
+	show()
+	change_state(IDLE)
 
 func change_state(new_state):
 	state = new_state
@@ -26,6 +34,23 @@ func change_state(new_state):
 			new_anim = 'jump'
 		DEAD:
 			hide()
+
+func move_in_direction(dir):
+	match dir:
+		"right":
+			goright = true
+		"left":
+			goleft = true
+		"jump":
+			if is_on_floor():
+				jumpnow = true
+
+func cancel_move_in_direction(dir):
+	match dir:
+		"right":
+			goright = false
+		"left":
+			goleft = false
 
 func get_input():
 	if state == HURT:
@@ -43,17 +68,19 @@ func get_input():
 	else:
 		run_speed = horizontal_velocity
 
-	if right:
+	if right || goright:
 		velocity.x += run_speed
 		$AnimatedSprite.flip_h = false
-	if left:
+	if left || goleft:
 		velocity.x -= run_speed
 		$AnimatedSprite.flip_h = true
 
 	# Only allow jumping when on the ground
-	if jump and is_on_floor():
-		change_state(JUMP)
-		velocity.y = upward_velocity
+	if jump || jumpnow: 
+		if is_on_floor():
+			jumpnow = false
+			change_state(JUMP)
+			velocity.y = upward_velocity
 	# IDLE transitions to RUN when moving
 	if state == IDLE and velocity.x != 0:
 		change_state(RUN)
@@ -62,7 +89,6 @@ func get_input():
 		change_state(IDLE)
 	# Transition to JUMP when falling off an edge
 	if state in [IDLE, RUN] and !is_on_floor():
-		print("Falling")
 		change_state(JUMP)
 
 
@@ -82,3 +108,4 @@ func _physics_process(delta):
 		change_state(IDLE)
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
+

@@ -19,6 +19,11 @@ config/name="Project Ryzz Rad Wi 002"
 run/main_scene="res://levels/Blue/BlueLevel01.tscn"
 config/icon="res://assets/PNG/Players/Player Blue/playerBlue_walk4.png"
 
+[display]
+
+window/size/width=960
+window/size/height=480
+
 [input]
 
 right={

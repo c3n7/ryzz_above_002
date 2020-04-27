@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/HUD/controls/flatLight/flatLight24.png" type="Texture" id=1]
+[ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight27.png" type="Texture" id=2]
+[ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight25.png" type="Texture" id=3]
+[ext_resource path="res://assets/HUD/controls/flatLight/flatLight22.png" type="Texture" id=4]
+[ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight24.png" type="Texture" id=5]
+[ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight26.png" type="Texture" id=6]
+[ext_resource path="res://assets/HUD/controls/flatLight/flatLight23.png" type="Texture" id=7]
+[ext_resource path="res://assets/HUD/controls/flatLight/flatLight25.png" type="Texture" id=8]
+[ext_resource path="res://ui/Controls.gd" type="Script" id=9]
+
+[node name="Controls" type="CanvasLayer"]
+script = ExtResource( 9 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -939.492
+margin_top = -204.17
+margin_right = -691.492
+margin_bottom = 43.8301
+rect_scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LeftButton" type="TextureButton" parent="HBoxContainer"]
+margin_top = 83.0
+margin_right = 80.0
+margin_bottom = 163.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 84.0
+margin_right = 164.0
+margin_bottom = 247.0
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="HBoxContainer/VBoxContainer"]
+margin_right = 80.0
+margin_bottom = 247.0
+size_flags_vertical = 3
+split_offset = -1
+
+[node name="TopButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/VSplitContainer"]
+margin_right = 80.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/VSplitContainer"]
+margin_top = 167.0
+margin_right = 80.0
+margin_bottom = 247.0
+size_flags_vertical = 8
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightButton" type="TextureButton" parent="HBoxContainer"]
+margin_left = 168.0
+margin_top = 83.0
+margin_right = 248.0
+margin_bottom = 163.0
+size_flags_vertical = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="HBoxContainer/LeftButton" to="." method="_on_LeftButton_button_down"]
+[connection signal="button_up" from="HBoxContainer/LeftButton" to="." method="_on_LeftButton_button_up"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VSplitContainer/TopButton" to="." method="_on_TopButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VSplitContainer/BottomButton" to="." method="_on_BottomButton_pressed"]
+[connection signal="button_down" from="HBoxContainer/RightButton" to="." method="_on_RightButton_button_down"]
+[connection signal="button_up" from="HBoxContainer/RightButton" to="." method="_on_RightButton_button_up"]
