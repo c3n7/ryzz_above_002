@@ -4,6 +4,7 @@ extends Area2D
 signal pickup
 
 var textures = {
+	'blueCrystal': 'res://assets/PNG/Items/blueCrystal.png',
 	'blueGem': 'res://assets/PNG/Items/blueGem.png',
 	'blueJewel': 'res://assets/PNG/Items/blueJewel.png'
 }
