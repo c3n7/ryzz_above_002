@@ -88,7 +88,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="groundLeft"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="groundLeft/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
+polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 16, 8, 0 )
 
 [node name="groundCenter" type="Sprite" parent="."]
 position = Vector2( 88, 64 )
@@ -114,7 +114,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="groundRight"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="groundRight/StaticBody2D"]
-polygon = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
+polygon = PoolVector2Array( 56, 0, 64, 16, 64, 64, 0, 64, 0, 0 )
 
 [node name="groundSolo" type="Sprite" parent="."]
 position = Vector2( 264, 64 )

@@ -22,7 +22,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
-"loop": true,
+"loop": false,
 "name": "fall",
 "speed": 5.0
 }, {
@@ -43,20 +43,18 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17.871, 20.1497 )
+extents = Vector2( 13.1159, 22.6531 )
 
 [node name="PlayerBlue" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 13 )
-run_speed = 50
-jump_speed = -305
-gravity = 750
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "jump"
-frame = 1
+animation = "run"
+frame = 2
+offset = Vector2( 0, -3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
