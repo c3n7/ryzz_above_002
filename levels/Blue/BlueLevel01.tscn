@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilesets/worlds/blueworldtileset.tres" type="TileSet" id=2]
-[ext_resource path="res://players/PlayerGrey.tscn" type="PackedScene" id=3]
+[ext_resource path="res://players/PlayerGreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/PNG/Backgrounds/set1_background.png" type="Texture" id=4]
 [ext_resource path="res://assets/PNG/Backgrounds/set1_tiles.png" type="Texture" id=5]
 [ext_resource path="res://assets/PNG/Backgrounds/set1_hills.png" type="Texture" id=6]

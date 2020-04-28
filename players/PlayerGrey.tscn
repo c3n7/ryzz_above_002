@@ -32,11 +32,6 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "run",
-"speed": 24.0
-}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": false,
 "name": "fall",
@@ -46,6 +41,11 @@ animations = [ {
 "loop": false,
 "name": "jump",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "run",
+"speed": 24.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
