@@ -21,6 +21,6 @@ func _ready():
 								$Sprite.texture.get_height()/2)
 	$CollisionShape2D.shape = collShape
 
-func _on_Collectible_body_entered(body):
+func _on_Collectible_body_entered(_body):
 	emit_signal('pickup')
 	queue_free()

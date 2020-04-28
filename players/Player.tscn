@@ -17,7 +17,7 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "run",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -32,14 +32,16 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "jump",
+"name": "run",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 24 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 1 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilesets/worlds/blueworldtileset.tres" type="TileSet" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/PNG/Backgrounds/set1_tiles.png" type="Texture" id=5]
 [ext_resource path="res://assets/PNG/Backgrounds/set1_hills.png" type="Texture" id=6]
 [ext_resource path="res://collectibles/Collectible.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enemies/WalkingEnemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/PNG/Enemies/WalkingEnemyBounds.tscn" type="PackedScene" id=9]
 
 [node name="BlueLevel01" instance=ExtResource( 1 )]
 player = ExtResource( 3 )
@@ -34,3 +36,17 @@ tile_data = PoolIntArray( -786392, 3, 0, -786391, 3, 0, -786390, 3, 0, -786389, 
 
 [node name="PlayerSpawn" parent="." index="5"]
 position = Vector2( 128, 40 )
+
+[node name="EnemyBounds" type="Node2D" parent="." index="9"]
+
+[node name="WalkingEnemyBounds" parent="EnemyBounds" index="0" instance=ExtResource( 9 )]
+position = Vector2( 1469.41, 334.72 )
+
+[node name="WalkingEnemyBounds2" parent="EnemyBounds" index="1" instance=ExtResource( 9 )]
+position = Vector2( 1947.58, 330.843 )
+
+[node name="Enemies" type="Node2D" parent="." index="10"]
+position = Vector2( 535.036, 72.372 )
+
+[node name="WalkingEnemy" parent="Enemies" index="0" instance=ExtResource( 8 )]
+position = Vector2( 1221.28, 288.196 )
