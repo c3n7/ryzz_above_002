@@ -17,8 +17,12 @@ func _ready():
 
 
 func _on_Quit_pressed():
+	$Click.play()
+	yield($Click, "finished")
 	get_tree().quit()
 
 
 func _on_NewGame_pressed():
+	$Click.play()
+	yield($Click, "finished")
 	GameState.next_level()
