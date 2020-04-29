@@ -50,7 +50,7 @@ func change_state(new_state):
 			new_anim = "dead"
 			yield(get_tree().create_timer(3), "timeout")
 			emit_signal('dead')
-			hide()
+			GameState.restart()
 
 func move_in_direction(dir):
 	match dir:
@@ -142,3 +142,6 @@ func _physics_process(delta):
 		var collision = get_slide_collision(idx)
 		if collision.collider.name == 'Danger':
 			hurt()
+
+	if position.y > 1000:
+		change_state(DEAD)

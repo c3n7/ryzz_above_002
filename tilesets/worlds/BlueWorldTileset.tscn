@@ -28,6 +28,8 @@
 [ext_resource path="res://assets/PNG/Tiles/Blue tiles/tileBlue_26.png" type="Texture" id=26]
 [ext_resource path="res://assets/PNG/Tiles/Blue tiles/tileBlue_27.png" type="Texture" id=27]
 
+
+
 [node name="BlueWordTileset" type="Node2D"]
 
 [node name="floatingRight" type="Sprite" parent="."]

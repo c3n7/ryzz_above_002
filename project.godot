@@ -19,6 +19,10 @@ config/name="Ryzz 002"
 run/main_scene="res://levels/Blue/BlueLevel01.tscn"
 config/icon="res://assets/PNG/Players/Player Blue/playerBlue_walk4.png"
 
+[autoload]
+
+GameState="*res://GameState.gd"
+
 [display]
 
 window/size/width=960
