@@ -8,7 +8,10 @@ export (PackedScene) var Collectible
 onready var pickups = $Collectibles
 var score
 var collectibles = [
-	'blueGem', 'blueJewel', 'blueCrystal'
+	'blueGem', 'blueJewel', 'blueCrystal',
+	'redGem', 'redJewel', 'redCrystal',
+	'greenGem', 'greenJewel', 'greenCrystal',
+	'yellowGem', 'yellowJewel', 'yellowCrystal'
 ]
 
 # Called when the node enters the scene tree for the first time.

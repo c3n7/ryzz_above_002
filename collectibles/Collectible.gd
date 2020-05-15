@@ -6,7 +6,16 @@ signal pickup
 var textures = {
 	'blueCrystal': 'res://assets/PNG/Items/blueCrystal.png',
 	'blueGem': 'res://assets/PNG/Items/blueGem.png',
-	'blueJewel': 'res://assets/PNG/Items/blueJewel.png'
+	'blueJewel': 'res://assets/PNG/Items/blueJewel.png',
+	'yellowCrystal': 'res://assets/PNG/Items/yellowCrystal.png',
+	'yellowGem': 'res://assets/PNG/Items/yellowGem.png',
+	'yellowJewel': 'res://assets/PNG/Items/yellowJewel.png',
+	'redCrystal': 'res://assets/PNG/Items/redCrystal.png',
+	'redGem': 'res://assets/PNG/Items/redGem.png',
+	'redJewel': 'res://assets/PNG/Items/redJewel.png',
+	'greenCrystal': 'res://assets/PNG/Items/greenCrystal.png',
+	'greenGem': 'res://assets/PNG/Items/greenGem.png',
+	'greenJewel': 'res://assets/PNG/Items/greenJewel.png'
 }
 
 
