@@ -22,6 +22,16 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "run",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
 "name": "dead",
@@ -32,24 +42,15 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": false,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "jump",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "run",
-"speed": 24.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 19.4109
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 16.6537
+height = 17.1588
 
 [node name="PlayerGreen" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -59,8 +60,5 @@ frames = SubResource( 1 )
 animation = "run"
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -0.429283, 1.0732 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="4"]
-position = Vector2( 0.643921, -3.86352 )
+position = Vector2( 0.0977556, -0.507931 )
 shape = SubResource( 2 )

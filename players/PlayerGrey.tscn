@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://players/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_walk4.png" type="Texture" id=2]
@@ -22,6 +22,16 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "run",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": false,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": false,
 "name": "dead",
@@ -32,27 +42,15 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": false,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": false,
 "name": "jump",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "run",
-"speed": 24.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="CircleShape2D" id=3]
-radius = 18.5831
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 17.767
+height = 10.925
 
 [node name="PlayerGrey" instance=ExtResource( 1 )]
 script = ExtResource( 13 )
@@ -62,9 +60,4 @@ frames = SubResource( 1 )
 animation = "run"
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0, 16 )
 shape = SubResource( 2 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="4"]
-position = Vector2( 0.203903, -3.92185 )
-shape = SubResource( 3 )
