@@ -104,9 +104,9 @@ func get_input():
 		$AnimatedSprite.flip_h = true
 
 	# Only allow jumping when on the ground
-	if jump || jumpnow: 
+	if jump || jumpnow:
+		jumpnow = false 
 		if is_on_floor():
-			jumpnow = false
 			$Jump.play()
 			change_state(JUMP)
 			velocity.y = upward_velocity
