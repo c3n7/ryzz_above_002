@@ -21,6 +21,9 @@ var goright = false
 var goleft = false
 var life
 
+var max_jumps = 2
+var jump_count = 0
+
 func start():
 	life = 3
 	emit_signal('life_changed', life)
@@ -46,6 +49,7 @@ func change_state(new_state):
 				change_state(DEAD)
 		JUMP:
 			new_anim = 'jump'
+			jump_count = 1
 		DEAD:
 			new_anim = "dead"
 			yield(get_tree().create_timer(3), "timeout")
@@ -60,6 +64,8 @@ func move_in_direction(dir):
 			goleft = true
 		"jump":
 			if is_on_floor():
+				jumpnow = true
+			elif state == JUMP and jump_count < max_jumps:
 				jumpnow = true
 
 func cancel_move_in_direction(dir):
@@ -104,6 +110,12 @@ func get_input():
 			$Jump.play()
 			change_state(JUMP)
 			velocity.y = upward_velocity
+		elif state == JUMP and jump_count < max_jumps:
+			new_anim = 'jump_again'
+			$Jump.play()
+			velocity.y = upward_velocity / 1.5
+			jump_count += 1
+	
 	# IDLE transitions to RUN when moving
 	if state == IDLE and velocity.x != 0:
 		change_state(RUN)
@@ -134,6 +146,7 @@ func _physics_process(delta):
 		change_state(IDLE)
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
+	
 	
 
 	if state in [HURT, DEAD]:
