@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://ui/Controls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/Level.gd" type="Script" id=2]
@@ -418,6 +418,8 @@ points = PoolVector2Array( 24, 96, 104, 96, 112, 128, 16, 128 )
 12/shapes = [  ]
 12/z_index = 0
 
+[sub_resource type="TileSet" id=6]
+
 [node name="Level" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -473,6 +475,12 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 8
 collision_mask = 4
 format = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 6 )
+format = 1
+
+[node name="Enemies" type="Node2D" parent="."]
 
 [node name="Player" type="Node2D" parent="."]
 
