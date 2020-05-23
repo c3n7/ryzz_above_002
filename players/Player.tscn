@@ -11,8 +11,18 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [  ],
+"loop": false,
+"name": "jump_again",
+"speed": 5.0
+}, {
+"frames": [  ],
 "loop": true,
-"name": "dead",
+"name": "hit",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "swim",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -27,17 +37,12 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "hit",
+"name": "dead",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
 "name": "fall",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": false,
-"name": "jump_again",
 "speed": 5.0
 } ]
 
@@ -53,7 +58,7 @@ gravity_constant = 750
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "jump_again"
+animation = "swim"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

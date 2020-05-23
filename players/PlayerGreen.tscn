@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://players/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://players/PlayerGreen.gd" type="Script" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://assets/PNG/Players/Player Green/playerGreen_up3.png" type="Texture" id=12]
 [ext_resource path="res://assets/PNG/Players/Player Green/playerGreen_walk4.png" type="Texture" id=13]
 [ext_resource path="res://assets/PNG/Players/Player Green/playerGreen_walk5.png" type="Texture" id=14]
+[ext_resource path="res://assets/PNG/Players/Player Green/playerGreen_swim1.png" type="Texture" id=15]
+[ext_resource path="res://assets/PNG/Players/Player Green/playerGreen_swim2.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -22,14 +24,19 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": false,
-"name": "dead",
-"speed": 5.0
+"name": "jump_again",
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": false,
 "name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "swim",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ],
@@ -42,15 +49,15 @@ animations = [ {
 "name": "jump",
 "speed": 20.0
 }, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
 "name": "fall",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": false,
-"name": "jump_again",
-"speed": 20.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -62,6 +69,7 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
+frame = 1
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0.0977556, -0.507931 )

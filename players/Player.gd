@@ -19,6 +19,7 @@ var spawn_pos
 var jumpnow = false
 var goright = false
 var goleft = false
+var inwater = false
 var life
 
 var max_jumps = 2
@@ -37,16 +38,19 @@ func change_state(new_state):
 		IDLE:
 			new_anim = 'idle'
 		RUN:
-			new_anim = 'run'
+			if inwater:
+				new_anim = 'swim'
+			else:
+				new_anim = 'run'
 		HURT:
 			new_anim = 'hurt'
 			velocity.y = -600
 			life -= 1
 			emit_signal('life_changed', life)
 			yield(get_tree().create_timer(0.5), 'timeout')
-			change_state(IDLE)
+			call_deferred("change_state", IDLE)
 			if life <= 0:
-				change_state(DEAD)
+				call_deferred("change_state", DEAD)
 		JUMP:
 			new_anim = 'jump'
 			jump_count = 1
@@ -79,6 +83,12 @@ func hurt():
 	if state != HURT:
 		change_state(HURT)
 
+func setInWater(isInWater):
+	if !isInWater and state == JUMP:
+		inwater = isInWater
+	else:
+		inwater = true
+
 func get_input():
 	if state == DEAD:
 		return # don't allow movement during dead state
@@ -108,7 +118,7 @@ func get_input():
 		jumpnow = false 
 		if is_on_floor():
 			$Jump.play()
-			change_state(JUMP)
+			call_deferred("change_state", JUMP)
 			velocity.y = upward_velocity
 		elif state == JUMP and jump_count < max_jumps:
 			new_anim = 'jump_again'
@@ -118,13 +128,13 @@ func get_input():
 	
 	# IDLE transitions to RUN when moving
 	if state == IDLE and velocity.x != 0:
-		change_state(RUN)
+		call_deferred("change_state", RUN)
 	# RUN transitions to IDLE when standing still
 	if state == RUN and velocity.x == 0:
-		change_state(IDLE)
+		call_deferred("change_state", IDLE)
 	# Transition to JUMP when falling off an edge
 	if state in [IDLE, RUN] and !is_on_floor():
-		change_state(JUMP)
+		call_deferred("change_state", JUMP)
 
 
 func _physics_process(delta):
@@ -132,7 +142,9 @@ func _physics_process(delta):
 	# if dead, x velocity should be zero
 	if state == DEAD:
 		velocity.x = 0
+	
 	velocity.y += gravity_constant * delta
+		
 	get_input()
 
 	if new_anim != anim:
@@ -143,7 +155,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
 	if state == JUMP and is_on_floor():
-		change_state(IDLE)
+		call_deferred("change_state", IDLE)
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
 	
@@ -157,4 +169,4 @@ func _physics_process(delta):
 			hurt()
 
 	if position.y > 1000:
-		change_state(DEAD)
+		call_deferred("change_state", DEAD)
