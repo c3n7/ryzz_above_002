@@ -13,7 +13,7 @@ anchor_right = 1.0
 margin_left = 20.0
 margin_top = 20.0
 margin_right = -20.0
-margin_bottom = 131.0
+margin_bottom = 108.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -21,47 +21,48 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 920.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 
 [node name="ScoreLabel" type="Label" parent="HBoxContainer"]
 margin_right = 740.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
+custom_constants/line_spacing = 0
 text = "1
 "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
 margin_left = 744.0
 margin_right = 920.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 
 [node name="L1" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
 margin_right = 32.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 texture = ExtResource( 2 )
 
 [node name="L2" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
 margin_left = 36.0
 margin_right = 68.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 texture = ExtResource( 2 )
 
 [node name="L3" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
 margin_left = 72.0
 margin_right = 104.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 texture = ExtResource( 2 )
 
 [node name="L4" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
 margin_left = 108.0
 margin_right = 140.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 texture = ExtResource( 2 )
 
 [node name="L5" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
 margin_left = 144.0
 margin_right = 176.0
-margin_bottom = 111.0
+margin_bottom = 108.0
 texture = ExtResource( 2 )

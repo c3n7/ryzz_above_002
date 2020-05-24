@@ -24,15 +24,20 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": false,
-"name": "jump_again",
-"speed": 20.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": false,
 "name": "hurt",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "jump_again",
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
@@ -48,11 +53,6 @@ animations = [ {
 "loop": false,
 "name": "jump",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
