@@ -165,7 +165,7 @@ func _physics_process(delta):
 		return;	
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
-		if collision.collider.name == 'Danger':
+		if collision.collider.name in ['Danger', 'Water']:
 			hurt()
 
 	if position.y > 1000:

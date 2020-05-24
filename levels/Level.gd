@@ -31,9 +31,9 @@ func _ready():
 	emit_signal("score_changed", score)
 	# Hide the markers, show the coins
 	pickups.hide()
-	water.hide()
 	spawn_pickups()
-	spawn_water()
+#	water.hide()
+#	spawn_water()
 	
 	# Spawn the player
 	var p = player.instance()
