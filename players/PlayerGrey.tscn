@@ -22,14 +22,24 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "hurt",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": false,
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": false,
-"name": "hurt",
+"name": "jump_again",
+"speed": 20.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "swim",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
@@ -46,11 +56,6 @@ animations = [ {
 "loop": false,
 "name": "fall",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ],
-"loop": false,
-"name": "jump_again",
-"speed": 20.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -62,6 +67,7 @@ script = ExtResource( 13 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
+animation = "hurt"
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource( 2 )

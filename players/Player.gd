@@ -20,6 +20,7 @@ var jumpnow = false
 var goright = false
 var goleft = false
 var inwater = false
+var waterhit = false
 var life
 
 var max_jumps = 2
@@ -80,6 +81,7 @@ func cancel_move_in_direction(dir):
 			goleft = false
 
 func hurt():
+	waterhit = false
 	if state != HURT:
 		change_state(HURT)
 
@@ -154,7 +156,7 @@ func _physics_process(delta):
 	# Move the player
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
-	if state == JUMP and is_on_floor():
+	if state == JUMP and is_on_floor() and !waterhit:
 		call_deferred("change_state", IDLE)
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
@@ -165,7 +167,10 @@ func _physics_process(delta):
 		return;	
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
-		if collision.collider.name in ['Danger', 'Water']:
+		if collision.collider.name == 'Danger':
+			hurt()
+		if collision.collider.name == 'Water':
+			waterhit = true
 			hurt()
 
 	if position.y > 1000:
