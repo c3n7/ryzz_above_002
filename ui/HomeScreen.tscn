@@ -399,11 +399,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Options" type="Button" parent="Buttons"]
+[node name="Levels" type="Button" parent="Buttons"]
 margin_top = 52.0
 margin_right = 145.0
 margin_bottom = 100.0
-text = "OPTIONS"
+text = "LEVELS"
 
 [node name="Credits" type="Button" parent="Buttons"]
 margin_top = 104.0
@@ -423,4 +423,5 @@ text = "Quit"
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
 [connection signal="pressed" from="Buttons/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Buttons/Levels" to="." method="_on_Levels_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_Quit_pressed"]

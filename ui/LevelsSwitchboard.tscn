@@ -1,0 +1,717 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://themes/blue_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/PNG/Other/plantRed_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/PNG/Other/plantRed_3.png" type="Texture" id=4]
+[ext_resource path="res://assets/PNG/Other/plantStem_Tleft.png" type="Texture" id=5]
+[ext_resource path="res://assets/PNG/Other/plantThorns_horizontal.png" type="Texture" id=6]
+[ext_resource path="res://assets/PNG/Other/plantDark_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/PNG/Other/plantStem_cross.png" type="Texture" id=8]
+[ext_resource path="res://assets/PNG/Enemies/enemyFloating_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/Fonts/Kenney Mini Square.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/PNG/Players/Player Red/playerRed_swim1.png" type="Texture" id=11]
+[ext_resource path="res://assets/PNG/Enemies/enemyFlying_1.png" type="Texture" id=12]
+[ext_resource path="res://assets/PNG/Players/Player Grey/playerGrey_switch2.png" type="Texture" id=13]
+[ext_resource path="res://assets/PNG/Items/keyRed.png" type="Texture" id=14]
+[ext_resource path="res://assets/PNG/Enemies/enemyFloating_3.png" type="Texture" id=15]
+[ext_resource path="res://assets/PNG/Items/greenCrystal.png" type="Texture" id=16]
+[ext_resource path="res://assets/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=17]
+[ext_resource path="res://assets/PNG/Players/Player Green/playerGreen_roll.png" type="Texture" id=18]
+[ext_resource path="res://assets/PNG/Other/plantThorns_vertical.png" type="Texture" id=19]
+[ext_resource path="res://assets/PNG/Enemies/enemySpikey_3.png" type="Texture" id=20]
+[ext_resource path="res://assets/PNG/Other/plantTop_blue.png" type="Texture" id=21]
+[ext_resource path="res://assets/PNG/Other/plantStem_cornerLeft.png" type="Texture" id=22]
+[ext_resource path="res://assets/PNG/Items/greenJewel.png" type="Texture" id=23]
+[ext_resource path="res://assets/PNG/Items/yellowGem.png" type="Texture" id=24]
+[ext_resource path="res://assets/PNG/Other/plantTop_yellow.png" type="Texture" id=25]
+[ext_resource path="res://assets/PNG/Other/plantTop_leaves.png" type="Texture" id=26]
+[ext_resource path="res://assets/PNG/Items/discGreen.png" type="Texture" id=27]
+[ext_resource path="res://assets/PNG/Items/yellowCrystal.png" type="Texture" id=28]
+[ext_resource path="res://assets/PNG/Other/plantStem_cornerRight.png" type="Texture" id=29]
+[ext_resource path="res://assets/HUD/uipack/Bonus/click1.ogg" type="AudioStream" id=30]
+[ext_resource path="res://ui/LevelsSwitchboard.gd" type="Script" id=31]
+[ext_resource path="res://assets/HUD/uipack/PNG/red_cross.png" type="Texture" id=32]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+outline_color = Color( 0.0705882, 0.415686, 0.564706, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.34902, 0.639216, 0.192157, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.172549, 0.329412, 0.376471, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.133333, 0.258824, 0.298039, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.34902, 0.639216, 0.192157, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.172549, 0.329412, 0.376471, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.133333, 0.258824, 0.298039, 1 )
+shadow_size = 3
+shadow_offset = Vector2( 3, 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.34902, 0.639216, 0.192157, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.172549, 0.329412, 0.376471, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.133333, 0.258824, 0.298039, 1 )
+shadow_size = 7
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 47
+outline_size = 2
+outline_color = Color( 0.733333, 0.862745, 0.184314, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.866667, 0.305882, 0.329412, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.211765, 0.196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.196078, 0.145098, 0.137255, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.866667, 0.305882, 0.329412, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.211765, 0.196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.196078, 0.145098, 0.137255, 1 )
+shadow_size = 3
+shadow_offset = Vector2( 3, 3 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.866667, 0.305882, 0.329412, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.211765, 0.196078, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.196078, 0.145098, 0.137255, 1 )
+shadow_size = 7
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 47
+outline_size = 2
+outline_color = Color( 0.917647, 0.85098, 0.298039, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.129412, 0.521569, 0.835294, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.188235, 0.219608, 0.254902, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.141176, 0.164706, 0.188235, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.129412, 0.521569, 0.835294, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.188235, 0.219608, 0.254902, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.141176, 0.164706, 0.188235, 1 )
+shadow_size = 3
+shadow_offset = Vector2( 3, 3 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.129412, 0.521569, 0.835294, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.188235, 0.219608, 0.254902, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.141176, 0.164706, 0.188235, 1 )
+shadow_size = 7
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 47
+outline_size = 2
+outline_color = Color( 0.227451, 0.278431, 0.313726, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.25098, 0.623529, 0.431373, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.117647, 0.290196, 0.2, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.0902, 0.22, 0.152937, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.25098, 0.623529, 0.431373, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.117647, 0.290196, 0.2, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.0902, 0.22, 0.152937, 1 )
+shadow_size = 3
+shadow_offset = Vector2( 3, 3 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+content_margin_left = 200.0
+content_margin_right = 200.0
+content_margin_top = 100.0
+content_margin_bottom = 200.0
+bg_color = Color( 0.25098, 0.623529, 0.431373, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.117647, 0.290196, 0.2, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color( 0.0902, 0.22, 0.152937, 1 )
+shadow_size = 7
+shadow_offset = Vector2( 5, 5 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 47
+outline_size = 2
+outline_color = Color( 0.580392, 0.866667, 0.301961, 1 )
+font_data = ExtResource( 10 )
+
+[node name="LevelsSwitchboard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+margin_right = 960.0
+margin_bottom = 480.0
+
+[node name="Decorations" type="Node2D" parent="MarginContainer/Panel"]
+position = Vector2( 128, 128 )
+
+[node name="plantDark_1" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 160, -64 )
+texture = ExtResource( 7 )
+
+[node name="plantRed_3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 640, -96 )
+texture = ExtResource( 4 )
+
+[node name="plantRed_2" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -96.3505, -59.3197 )
+texture = ExtResource( 3 )
+
+[node name="plantStem_cornerRight" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -128, 232 )
+texture = ExtResource( 29 )
+centered = false
+
+[node name="plantStem_cross" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -96, 200 )
+texture = ExtResource( 8 )
+
+[node name="plantStem_cornerRight2" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -51.9771, 310.827 )
+texture = ExtResource( 29 )
+
+[node name="plantThorns_horizontal" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -96.8551, 323.818 )
+texture = ExtResource( 6 )
+
+[node name="plantTop_leaves" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 83.8377, 185.641 )
+rotation = -3.14159
+texture = ExtResource( 26 )
+
+[node name="playerBlue_hit" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 320.022, 65.0018 )
+texture = ExtResource( 17 )
+
+[node name="playerGreen_roll" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 159.382, 188.487 )
+texture = ExtResource( 18 )
+
+[node name="playerGrey_switch2" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 34.8041, -77.0606 )
+texture = ExtResource( 13 )
+
+[node name="playerRed_swim1" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 68.6806, 0.527298 )
+texture = ExtResource( 11 )
+
+[node name="plantStem_cornerLeft" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 141.264, 103.497 )
+texture = ExtResource( 22 )
+centered = false
+
+[node name="plantThorns_vertical" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -55.8813, 232 )
+texture = ExtResource( 19 )
+centered = false
+
+[node name="plantStem_Tleft" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -51.8813, 200 )
+texture = ExtResource( 5 )
+
+[node name="plantStem_cross2" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -38.8211, 136.599 )
+texture = ExtResource( 8 )
+
+[node name="plantStem_cornerRight3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 10.6158, 124.229 )
+texture = ExtResource( 29 )
+
+[node name="plantStem_cross3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -96.2646, 136.63 )
+texture = ExtResource( 8 )
+
+[node name="plantTop_blue" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -37.2147, 17.3488 )
+texture = ExtResource( 21 )
+
+[node name="plantStem_cornerLeft3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 37.1882, 88.2087 )
+rotation = 1.5708
+texture = ExtResource( 22 )
+
+[node name="plantStem_Tleft2" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 83.8377, 89.9802 )
+rotation = -1.5708
+texture = ExtResource( 5 )
+
+[node name="plantThorns_vertical2" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 83.8377, 140.173 )
+texture = ExtResource( 19 )
+
+[node name="plantTop_yellow" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 198.394, 137.22 )
+rotation = 1.5708
+texture = ExtResource( 25 )
+
+[node name="enemyFloating_1" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 253.311, -11.5857 )
+texture = ExtResource( 9 )
+
+[node name="enemyFlying_1" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 326.579, 232.198 )
+texture = ExtResource( 12 )
+
+[node name="enemyFloating_3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 111.299, 236.57 )
+texture = ExtResource( 15 )
+
+[node name="enemySpikey_3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 507.981, 151.332 )
+texture = ExtResource( 20 )
+
+[node name="greenCrystal" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 401.981, 21.2903 )
+texture = ExtResource( 16 )
+
+[node name="greenJewel" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 214.021, -53.0193 )
+texture = ExtResource( 23 )
+
+[node name="keyRed" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 384.496, 146.961 )
+texture = ExtResource( 14 )
+
+[node name="discGreen" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 621.631, 80.3009 )
+texture = ExtResource( 27 )
+
+[node name="yellowCrystal" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 646.766, 198.322 )
+texture = ExtResource( 28 )
+
+[node name="yellowGem" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 705.776, 262.797 )
+texture = ExtResource( 24 )
+
+[node name="plantStem_Tleft3" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -51.9771, 73.4462 )
+texture = ExtResource( 5 )
+
+[node name="plantStem_cornerLeft4" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( -82.0926, 87.0277 )
+rotation = 1.5708
+texture = ExtResource( 22 )
+
+[node name="plantStem_cornerRight4" type="Sprite" parent="MarginContainer/Panel/Decorations"]
+position = Vector2( 132.849, 89.3897 )
+rotation = -1.5708
+texture = ExtResource( 29 )
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -242.0
+margin_right = 480.0
+margin_bottom = 242.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/CenterContainer"]
+margin_left = 20.0
+margin_top = 13.0
+margin_right = 940.0
+margin_bottom = 471.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="heading" type="HBoxContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+margin_right = 920.0
+margin_bottom = 54.0
+size_flags_vertical = 0
+
+[node name="BackButton" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/heading"]
+margin_right = 60.0
+margin_bottom = 54.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/heading/BackButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -9.0
+margin_top = -9.0
+margin_right = 9.0
+margin_bottom = 9.0
+texture = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/heading"]
+margin_left = 390.0
+margin_right = 594.0
+margin_bottom = 54.0
+size_flags_horizontal = 6
+custom_fonts/font = SubResource( 1 )
+custom_constants/shadow_offset_y = 4
+text = "Levels"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+margin_top = 58.0
+margin_right = 920.0
+margin_bottom = 458.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 920.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 920, 400 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer"]
+margin_top = 12.0
+margin_right = 1748.0
+margin_bottom = 371.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer"]
+margin_right = 1748.0
+margin_bottom = 359.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1" type="HBoxContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer"]
+margin_right = 400.0
+margin_bottom = 359.0
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level1"]
+margin_right = 400.0
+margin_bottom = 359.0
+focus_mode = 0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level1/Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -116.5
+margin_top = -91.5
+margin_right = 116.5
+margin_bottom = 91.5
+custom_fonts/font = SubResource( 3 )
+text = "1
+Greener
+Pastures"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="HBoxContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer"]
+margin_left = 404.0
+margin_right = 838.0
+margin_bottom = 359.0
+size_flags_horizontal = 3
+
+[node name="divider" type="ColorRect" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level2"]
+margin_right = 30.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 30, 0 )
+color = Color( 0.0823529, 0.564706, 0.768627, 0 )
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level2"]
+margin_left = 34.0
+margin_right = 434.0
+margin_bottom = 359.0
+focus_mode = 0
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level2/Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -116.5
+margin_top = -91.5
+margin_right = 116.5
+margin_bottom = 91.5
+custom_fonts/font = SubResource( 8 )
+text = "2
+RED
+DAY"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level3" type="HBoxContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer"]
+margin_left = 842.0
+margin_right = 1276.0
+margin_bottom = 359.0
+size_flags_horizontal = 3
+
+[node name="divider" type="ColorRect" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level3"]
+margin_right = 30.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 30, 0 )
+color = Color( 0.0823529, 0.564706, 0.768627, 0 )
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level3"]
+margin_left = 34.0
+margin_right = 434.0
+margin_bottom = 359.0
+focus_mode = 0
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level3/Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -116.5
+margin_top = -91.5
+margin_right = 116.5
+margin_bottom = 91.5
+custom_fonts/font = SubResource( 15 )
+text = "3
+BLUE
+SKIES"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level4" type="HBoxContainer" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer"]
+margin_left = 1280.0
+margin_right = 1748.0
+margin_bottom = 359.0
+size_flags_horizontal = 3
+
+[node name="divider" type="ColorRect" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level4"]
+margin_right = 30.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 30, 0 )
+color = Color( 0.0823529, 0.564706, 0.768627, 0 )
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level4"]
+margin_left = 34.0
+margin_right = 434.0
+margin_bottom = 359.0
+focus_mode = 0
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level4/Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -116.5
+margin_top = -91.5
+margin_right = 116.5
+margin_bottom = 91.5
+custom_fonts/font = SubResource( 21 )
+text = "4
+Yellow
+Death"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="divider2" type="ColorRect" parent="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level4"]
+margin_left = 438.0
+margin_right = 468.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 30, 0 )
+color = Color( 0.0823529, 0.564706, 0.768627, 0 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+[connection signal="pressed" from="MarginContainer/Panel/CenterContainer/VBoxContainer/heading/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level1/Button" to="." method="_on_Level1_Button_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/CenterContainer/VBoxContainer/CenterContainer/ScrollContainer/CenterContainer/HBoxContainer/Level2/Button" to="." method="_on_Level2_Button_pressed"]
