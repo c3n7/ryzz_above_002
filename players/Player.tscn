@@ -29,15 +29,10 @@ animations = [ {
 "name": "run",
 "speed": 24.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": false,
 "name": "jump",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 15 ) ],
-"loop": false,
-"name": "hit",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 4 ) ],
 "loop": true,
@@ -47,6 +42,11 @@ animations = [ {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": false,
+"name": "hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
