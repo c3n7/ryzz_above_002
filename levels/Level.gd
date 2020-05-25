@@ -85,7 +85,7 @@ func spawn_door():
 			var d = Door.instance()
 			var pos = pickups.map_to_world(cell)
 			d.init(type, pos + pickups.cell_size)
-			call_deferred("add_child", d)
+			$Door.call_deferred("add_child", d)
 			d.connect('entered', self, '_on_Door_entered')
 
 func _on_Player_dead():
@@ -108,6 +108,8 @@ func _on_NotInWater():
 		pass
 
 func _on_Door_entered():
+	$LevelUpSound.play()
+	yield($LevelUpSound, "finished")
 	GameState.open_levels_screen()
 
 func _on_Controls_goup():

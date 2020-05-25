@@ -6,13 +6,13 @@
 [ext_resource path="res://enemies/enemyFloatingDiag.tscn" type="PackedScene" id=6]
 [ext_resource path="res://enemies/enemySpikey.tscn" type="PackedScene" id=7]
 
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
-
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=3]
 24/name = "spikesSmall"
 24/texture = ExtResource( 4 )
 24/tex_offset = Vector2( 0, 0 )
@@ -23,14 +23,14 @@ points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
 24/navigation_offset = Vector2( 0, 0 )
 24/shape_offset = Vector2( 0, 0 )
 24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-24/shape = SubResource( 2 )
+24/shape = SubResource( 1 )
 24/shape_one_way = false
 24/shape_one_way_margin = 1.0
 24/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 24/z_index = 0
@@ -44,14 +44,14 @@ points = PoolVector2Array( 112, 64, 16, 64, 16, 32, 112, 32 )
 25/navigation_offset = Vector2( 0, 0 )
 25/shape_offset = Vector2( 0, 0 )
 25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-25/shape = SubResource( 3 )
+25/shape = SubResource( 2 )
 25/shape_one_way = false
 25/shape_one_way_margin = 1.0
 25/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 25/z_index = 0
@@ -69,7 +69,7 @@ tile_data = PoolIntArray( -458752, 29, 0, -393216, 34, 0, -393124, 26, 0, -39312
 tile_data = PoolIntArray( 327715, 3, 0, 327716, 3, 0, 393251, 7, 0, 393252, 7, 0, 393254, 3, 0, 393255, 3, 0, 393257, 3, 0, 393258, 3, 0, 393259, 3, 0, 393260, 3, 0, 393261, 3, 0, 393262, 3, 0, 393263, 3, 0, 458787, 7, 0, 458788, 7, 0, 458790, 7, 0, 458791, 7, 0, 458793, 7, 0, 458794, 7, 0, 458795, 7, 0, 458796, 7, 0, 458797, 7, 0, 458798, 7, 0, 458799, 7, 0, 524323, 7, 0, 524324, 7, 0, 524326, 7, 0, 524327, 7, 0, 524329, 7, 0, 524330, 7, 0, 524331, 7, 0, 524332, 7, 0, 524333, 7, 0, 524334, 7, 0, 524335, 7, 0, 589859, 7, 0, 589860, 7, 0, 589862, 7, 0, 589863, 7, 0, 589865, 7, 0, 589866, 7, 0, 589867, 7, 0, 589868, 7, 0, 589869, 7, 0, 589870, 7, 0, 589871, 7, 0 )
 
 [node name="Danger" parent="." index="5"]
-tile_set = SubResource( 4 )
+tile_set = SubResource( 3 )
 cell_tile_origin = 2
 tile_data = PoolIntArray( 852004, 24, 0, 852007, 25, 0, 852066, 25, 0, 852068, 25, 0, 852070, 25, 0, 852072, 25, 0, 852074, 25, 0, 852076, 25, 0, 852078, 25, 0, 852080, 25, 0, 852082, 25, 0, 852084, 25, 0, 852086, 24, 0, 852088, 24, 0, 852090, 24, 0 )
 
