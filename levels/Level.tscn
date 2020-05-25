@@ -761,10 +761,10 @@ Door = ExtResource( 9 )
 motion_mirroring = Vector2( 3840, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Background"]
-position = Vector2( -640, -960 )
+position = Vector2( -640, -1440 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 3840, 1440 )
+region_rect = Rect2( 0, 0, 3840, 1920 )
 
 [node name="Tiles" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.2, 1 )
