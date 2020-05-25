@@ -21,6 +21,7 @@ var goright = false
 var goleft = false
 var inwater = false
 var waterhit = false
+var dangerhit = false
 var life
 
 var max_jumps = 2
@@ -49,9 +50,11 @@ func change_state(new_state):
 			life -= 1
 			emit_signal('life_changed', life)
 			yield(get_tree().create_timer(0.5), 'timeout')
-			call_deferred("change_state", IDLE)
+			waterhit = false
+			dangerhit = false
+			change_state(IDLE)
 			if life <= 0:
-				call_deferred("change_state", DEAD)
+				change_state(DEAD)
 		JUMP:
 			new_anim = 'jump'
 			jump_count = 1
@@ -81,7 +84,6 @@ func cancel_move_in_direction(dir):
 			goleft = false
 
 func hurt():
-	waterhit = false
 	if state != HURT:
 		change_state(HURT)
 
@@ -120,7 +122,7 @@ func get_input():
 		jumpnow = false 
 		if is_on_floor():
 			$Jump.play()
-			call_deferred("change_state", JUMP)
+			change_state(JUMP)
 			velocity.y = upward_velocity
 		elif state == JUMP and jump_count < max_jumps:
 			new_anim = 'jump_again'
@@ -130,13 +132,13 @@ func get_input():
 	
 	# IDLE transitions to RUN when moving
 	if state == IDLE and velocity.x != 0:
-		call_deferred("change_state", RUN)
+		change_state(RUN)
 	# RUN transitions to IDLE when standing still
 	if state == RUN and velocity.x == 0:
-		call_deferred("change_state", IDLE)
+		change_state(IDLE)
 	# Transition to JUMP when falling off an edge
 	if state in [IDLE, RUN] and !is_on_floor():
-		call_deferred("change_state", JUMP)
+		change_state(JUMP)
 
 
 func _physics_process(delta):
@@ -156,8 +158,9 @@ func _physics_process(delta):
 	# Move the player
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
-	if state == JUMP and is_on_floor() and !waterhit:
-		call_deferred("change_state", IDLE)
+#	if state == JUMP and is_on_floor() and !waterhit:
+	if state == JUMP and is_on_floor():
+		change_state(IDLE)
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
 	
@@ -169,9 +172,6 @@ func _physics_process(delta):
 		var collision = get_slide_collision(idx)
 		if collision.collider.name == 'Danger':
 			hurt()
-		if collision.collider.name == 'Water':
-			waterhit = true
-			hurt()
 
 	if position.y > 1000:
-		call_deferred("change_state", DEAD)
+		change_state(DEAD)

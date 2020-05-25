@@ -24,6 +24,26 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "run",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "jump",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "swim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": false,
 "name": "hurt",
@@ -38,26 +58,6 @@ animations = [ {
 "loop": false,
 "name": "jump_again",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "swim",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "run",
-"speed": 24.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": false,
-"name": "jump",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": false,
-"name": "fall",
-"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
