@@ -63,8 +63,10 @@ __meta__ = {
 }
 
 [node name="TopButton" type="TextureButton" parent="TB"]
-margin_right = 80.0
+margin_left = 170.0
+margin_right = 250.0
 margin_bottom = 80.0
+size_flags_horizontal = 10
 size_flags_vertical = 4
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 1 )
@@ -73,6 +75,7 @@ __meta__ = {
 }
 
 [node name="BottomButton" type="TextureButton" parent="TB"]
+visible = false
 margin_left = 170.0
 margin_right = 250.0
 margin_bottom = 80.0
@@ -87,5 +90,5 @@ __meta__ = {
 [connection signal="button_up" from="LR/LeftButton" to="." method="_on_LeftButton_button_up"]
 [connection signal="button_down" from="LR/RightButton" to="." method="_on_RightButton_button_down"]
 [connection signal="button_up" from="LR/RightButton" to="." method="_on_RightButton_button_up"]
-[connection signal="pressed" from="TB/TopButton" to="." method="_on_TopButton_pressed"]
+[connection signal="button_down" from="TB/TopButton" to="." method="_on_TopButton_button_down"]
 [connection signal="pressed" from="TB/BottomButton" to="." method="_on_BottomButton_pressed"]

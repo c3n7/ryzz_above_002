@@ -31,4 +31,9 @@ func _on_LeftButton_button_up():
 
 
 func _on_TopButton_pressed():
+#	emit_signal("goup")
+	pass
+
+
+func _on_TopButton_button_down():
 	emit_signal("goup")

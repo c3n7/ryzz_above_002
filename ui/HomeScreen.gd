@@ -14,7 +14,8 @@ func _on_Quit_pressed():
 func _on_NewGame_pressed():
 	$Click.play()
 	yield($Click, "finished")
-	GameState.next_level()
+#	GameState.next_level()
+	GameState.open_level(3)
 
 
 func _on_Levels_pressed():
