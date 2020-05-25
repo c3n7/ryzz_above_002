@@ -980,7 +980,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 } ]
 68/z_index = 0
 
-[node name="YellowLevelLevel" instance=ExtResource( 4 )]
+[node name="YellowLevel" instance=ExtResource( 4 )]
 player = ExtResource( 6 )
 
 [node name="Sprite" parent="ParallaxBackground/Background" index="0"]

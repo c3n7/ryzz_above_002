@@ -1,5 +1,10 @@
 extends Control
 
+
+func _ready():
+	GameState.set_responsiveness(GameState.Responsiveness.EXPAND)
+
+
 func _on_Quit_pressed():
 	$Click.play()
 	yield($Click, "finished")

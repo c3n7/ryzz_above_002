@@ -27,6 +27,7 @@ var waterTiles = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameState.set_responsiveness(GameState.Responsiveness.SHOW_MORE)
 	score = 0
 	emit_signal("score_changed", score)
 	# Hide the markers, show the coins

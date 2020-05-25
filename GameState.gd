@@ -1,5 +1,6 @@
 extends Node
 
+enum Responsiveness { EXPAND, SHOW_MORE}
 
 var num_levels = 2
 var current_level = 1
@@ -29,3 +30,10 @@ func open_levels_screen():
 
 func open_title_screen():
 	get_tree().change_scene(title_screen)
+
+
+func set_responsiveness(type):
+	if type == Responsiveness.EXPAND:
+		get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_2D, SceneTree.STRETCH_ASPECT_EXPAND, Vector2(960, 480))
+	elif type == Responsiveness.SHOW_MORE:
+		get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_DISABLED, SceneTree.STRETCH_ASPECT_KEEP, Vector2(640, 480))
