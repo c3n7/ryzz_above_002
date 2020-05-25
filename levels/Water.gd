@@ -26,10 +26,13 @@ func init(type, pos):
 	position = pos
 
 func _on_Water_body_entered(body):
+	print("Checking hsdkf" + str(randi()))
 	if body.is_in_group("player"):
+		print("Water entered" + str(randi()))
 		emit_signal('inwater')
 
 
 func _on_Water_body_exited(body):
 		if body.is_in_group("player"):
+			print("holla")
 			emit_signal('notinwater')

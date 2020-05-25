@@ -11,7 +11,9 @@ var level1 = 'res://levels/Green/levels/GreenLevel01.tscn'
 
 var levels = [
 	'res://levels/Green/levels/GreenLevel01.tscn',
-	'res://levels/Red/levels/RedLevel01.tscn'
+	'res://levels/Red/levels/RedLevel01.tscn',
+	'res://levels/Blue/levels/BlueLevel01.tscn',
+	'res://levels/Yellow/YellowLevel.tscn'
 ]
 
 func restart():
@@ -30,7 +32,6 @@ func open_levels_screen():
 
 func open_title_screen():
 	get_tree().change_scene(title_screen)
-
 
 func set_responsiveness(type):
 	if type == Responsiveness.EXPAND:

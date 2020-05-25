@@ -13,8 +13,17 @@ func _on_Level1_Button_pressed():
 	yield($Click, "finished")
 	GameState.open_level(1)
 
-
 func _on_Level2_Button_pressed():
 	$Click.play()
 	yield($Click, "finished")
 	GameState.open_level(2)
+
+func _on_Level3_Button_pressed():
+	$Click.play()
+	yield($Click, "finished")
+	GameState.open_level(3)
+
+func _on_Level4_Button_pressed():
+	$Click.play()
+	yield($Click, "finished")
+	GameState.open_level(4)

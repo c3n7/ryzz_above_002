@@ -5,6 +5,7 @@ signal score_changed
 export (PackedScene) var player
 export (PackedScene) var Collectible
 export (PackedScene) var Water
+export (PackedScene) var Door
 
 onready var pickups = $Collectibles
 onready var water = $Water
@@ -25,6 +26,12 @@ var waterTiles = [
 	'waterRed1', 'waterRed2'
 ]
 
+var doorTiles = [
+	'doorGreenTop', 'doorGreenLock', 'doorGreenOpen',
+	'doorRedTop', 'doorRedLock', 'doorRedOpen',
+	'doorBrownTop', 'doorBrownOpen'
+]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameState.set_responsiveness(GameState.Responsiveness.SHOW_MORE)
@@ -33,8 +40,11 @@ func _ready():
 	# Hide the markers, show the coins
 	pickups.hide()
 	spawn_pickups()
+	
 #	water.hide()
 #	spawn_water()
+	
+	spawn_door()
 	
 	# Spawn the player
 	var p = player.instance()
@@ -67,6 +77,17 @@ func spawn_water():
 			w.connect('inwater', self, '_on_InWater')
 			w.connect('notinwater', self, '_on_NotInWater')
 
+func spawn_door():
+	for cell in pickups.get_used_cells():
+		var id = pickups.get_cellv(cell)
+		var type = pickups.tile_set.tile_get_name(id)
+		if type in doorTiles:
+			var d = Door.instance()
+			var pos = pickups.map_to_world(cell)
+			d.init(type, pos + pickups.cell_size)
+			call_deferred("add_child", d)
+			d.connect('entered', self, '_on_Door_entered')
+
 func _on_Player_dead():
 	pass
 
@@ -77,11 +98,17 @@ func _on_Collectible_pickup():
 
 func _on_InWater():
 	for p in $Player.get_children():
-		p.setInWater(true)
+		print("on water")
+#		p.setInWater(true)
+		p.hurt()
 
 func _on_NotInWater():
 	for p in $Player.get_children():
-		p.setInWater(false)
+#		p.setInWater(false)
+		pass
+
+func _on_Door_entered():
+	GameState.open_levels_screen()
 
 func _on_Controls_goup():
 	for p in $Player.get_children():

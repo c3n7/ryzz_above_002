@@ -50,8 +50,6 @@ func change_state(new_state):
 			life -= 1
 			emit_signal('life_changed', life)
 			yield(get_tree().create_timer(0.5), 'timeout')
-			waterhit = false
-			dangerhit = false
 			change_state(IDLE)
 			if life <= 0:
 				change_state(DEAD)
@@ -84,6 +82,8 @@ func cancel_move_in_direction(dir):
 			goleft = false
 
 func hurt():
+	waterhit = false
+	dangerhit = false
 	if state != HURT:
 		change_state(HURT)
 
@@ -164,13 +164,11 @@ func _physics_process(delta):
 	if state == JUMP and velocity.y > 0:
 		new_anim = 'fall'
 	
-	
-
 	if state in [HURT, DEAD]:
 		return;	
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
-		if collision.collider.name == 'Danger':
+		if collision.collider.name in ['Danger', 'Water']:
 			hurt()
 
 	if position.y > 1000:
