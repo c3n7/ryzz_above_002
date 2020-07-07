@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/HUD/controls/flatLight/flatLight24.png" type="Texture" id=1]
-[ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight27.png" type="Texture" id=2]
 [ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight25.png" type="Texture" id=3]
 [ext_resource path="res://assets/HUD/controls/flatLight/flatLight22.png" type="Texture" id=4]
 [ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight24.png" type="Texture" id=5]
 [ext_resource path="res://assets/HUD/controls/shadedLight/shadedLight26.png" type="Texture" id=6]
 [ext_resource path="res://assets/HUD/controls/flatLight/flatLight23.png" type="Texture" id=7]
-[ext_resource path="res://assets/HUD/controls/flatLight/flatLight25.png" type="Texture" id=8]
 [ext_resource path="res://ui/Controls.gd" type="Script" id=9]
 
 [node name="Controls" type="CanvasLayer"]
@@ -25,28 +23,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeftButton" type="TextureButton" parent="LR"]
-margin_right = 80.0
+[node name="Left" type="HBoxContainer" parent="LR"]
+margin_right = 123.0
 margin_bottom = 80.0
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+size_flags_horizontal = 3
 
-[node name="RightButton" type="TextureButton" parent="LR"]
-margin_left = 170.0
+[node name="LeftButton" type="TouchScreenButton" parent="LR/Left"]
+normal = ExtResource( 5 )
+pressed = ExtResource( 4 )
+visibility_mode = 1
+
+[node name="Right" type="HBoxContainer" parent="LR"]
+margin_left = 127.0
 margin_right = 250.0
 margin_bottom = 80.0
-size_flags_horizontal = 10
-size_flags_vertical = 4
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+size_flags_horizontal = 3
+
+[node name="RightButton" type="TouchScreenButton" parent="LR/Right"]
+normal = ExtResource( 3 )
+pressed = ExtResource( 7 )
+visibility_mode = 1
 
 [node name="TB" type="HBoxContainer" parent="."]
 anchor_left = 1.0
@@ -62,33 +58,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TopButton" type="TextureButton" parent="TB"]
-margin_left = 170.0
-margin_right = 250.0
+[node name="Bottom" type="HBoxContainer" parent="TB"]
+margin_right = 123.0
 margin_bottom = 80.0
-size_flags_horizontal = 10
-size_flags_vertical = 4
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+size_flags_horizontal = 3
 
-[node name="BottomButton" type="TextureButton" parent="TB"]
+[node name="BottomButton" type="TouchScreenButton" parent="TB/Bottom"]
 visible = false
-margin_left = 170.0
-margin_right = 250.0
+position = Vector2( -4, 0 )
+scale = Vector2( 1, 1 )
+visibility_mode = 1
+
+[node name="Top" type="HBoxContainer" parent="TB"]
+margin_left = 188.0
+margin_right = 188.0
 margin_bottom = 80.0
-size_flags_horizontal = 10
-size_flags_vertical = 4
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="button_down" from="LR/LeftButton" to="." method="_on_LeftButton_button_down"]
-[connection signal="button_up" from="LR/LeftButton" to="." method="_on_LeftButton_button_up"]
-[connection signal="button_down" from="LR/RightButton" to="." method="_on_RightButton_button_down"]
-[connection signal="button_up" from="LR/RightButton" to="." method="_on_RightButton_button_up"]
-[connection signal="button_down" from="TB/TopButton" to="." method="_on_TopButton_button_down"]
-[connection signal="pressed" from="TB/BottomButton" to="." method="_on_BottomButton_pressed"]
+size_flags_horizontal = 6
+
+[node name="TopButton" type="TouchScreenButton" parent="TB/Top"]
+scale = Vector2( 1, 1 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 1 )
+visibility_mode = 1
+[connection signal="pressed" from="LR/Left/LeftButton" to="." method="_on_LeftButton_pressed"]
+[connection signal="released" from="LR/Left/LeftButton" to="." method="_on_LeftButton_released"]
+[connection signal="pressed" from="LR/Right/RightButton" to="." method="_on_RightButton_pressed"]
+[connection signal="released" from="LR/Right/RightButton" to="." method="_on_RightButton_released"]
+[connection signal="pressed" from="TB/Bottom/BottomButton" to="." method="_on_BottomButton_pressed"]
+[connection signal="released" from="TB/Bottom/BottomButton" to="." method="_on_BottomButton_released"]
+[connection signal="pressed" from="TB/Top/TopButton" to="." method="_on_TopButton_pressed"]
+[connection signal="released" from="TB/Top/TopButton" to="." method="_on_TopButton_released"]
